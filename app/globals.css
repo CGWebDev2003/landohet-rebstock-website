@@ -82,29 +82,6 @@
   color-scheme: light;
 }
 
-/* --- Dark Mode: Tokens werden neu belegt, Komponenten bleiben gleich - */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-cream: #14180f;
-    --color-cream-200: #1a1f14;
-    --color-surface: #1d2318;
-    --color-forest-100: #24311f;
-    --color-sand-100: #3a3320;
-
-    --color-ink: #ecead9;
-    --color-heading: #f1eede;
-    --color-muted: #a9a89c;
-    --color-muted-soft: #86857a;
-    --color-line: #2c3323;
-
-    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-card: 0 12px 32px -12px rgba(0, 0, 0, 0.55);
-    --shadow-lg: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
-
-    color-scheme: dark;
-  }
-}
-
 /* =========================================================================
    Reset
    ========================================================================= */
