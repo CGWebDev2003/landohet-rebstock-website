@@ -217,11 +217,12 @@ export default function Home(): React.ReactElement {
             </Card>
           ))}
           <div className={styles.regionMedia}>
-            <Placeholder
-              label="Panorama über die Rebhänge des Renchtals im Morgenlicht"
-              ratio="3/4"
-              rounded="lg"
-              play
+            <Image
+              src="/impressionen/rebstockxxl-20b.jpg"
+              alt="Panorama über die Rebhänge des Renchtals im Morgenlicht"
+              fill
+              sizes="(min-width: 860px) 33vw, 100vw"
+              className={styles.regionMediaImg}
             />
           </div>
         </div>

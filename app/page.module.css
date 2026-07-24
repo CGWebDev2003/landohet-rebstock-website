@@ -272,6 +272,18 @@
   margin-top: var(--space-8);
 }
 
+.regionMedia {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.regionMediaImg {
+  object-fit: cover;
+}
+
 @media (min-width: 860px) {
   .regionGrid {
     grid-template-columns: 1fr 1fr 1fr;
@@ -280,9 +292,6 @@
   .regionMedia {
     grid-column: 3;
     grid-row: 1 / span 2;
-    height: 100%;
-  }
-  .regionMedia > :global(div[role="img"]) {
     height: 100%;
   }
 }
