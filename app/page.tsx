@@ -112,10 +112,12 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
           <div className={styles.drinksMedia}>
-            <Placeholder
-              label="Gedeckter Tisch mit Badischem Wein und Gläsern im Abendlicht"
-              ratio="4/3"
-              rounded="lg"
+            <Image
+              src="/impressionen/14-restaurant_1.jpg"
+              alt="Gedeckter Tisch mit Badischem Wein und Gläsern im Abendlicht"
+              fill
+              sizes="(min-width: 860px) 45vw, 100vw"
+              className={styles.drinksImage}
             />
           </div>
         </Card>
