@@ -4,6 +4,14 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.3.2] – 2026-07-24
+
+### Changed
+
+- **Hero-Section (Startseite)**: Der Bild-Platzhalter wurde durch das echte
+  Hintergrundbild (`public/01-startseite_3.jpg`) via `next/image` (`fill`,
+  `priority`) ersetzt.
+
 ## [0.3.1] – 2026-07-24
 
 ### Changed

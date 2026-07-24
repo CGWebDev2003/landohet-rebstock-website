@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { Section, SectionHeader } from "@/components/Section/Section";
@@ -34,10 +35,12 @@ export default function Home(): React.ReactElement {
       {/* ===== Hero ===== */}
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroMedia}>
-          <Placeholder
-            label="Landhotel Rebstock im goldenen Abendlicht, umgeben von Reben und Wald"
-            ratio="16/9"
+          <Image
+            src="/01-startseite_3.jpg"
+            alt="Landhotel Rebstock im goldenen Abendlicht, umgeben von Reben und Wald"
+            fill
             priority
+            sizes="100vw"
             className={styles.heroImage}
           />
           <div className={styles.heroScrim} aria-hidden="true" />
