@@ -4,6 +4,15 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.3.1] – 2026-07-24
+
+### Changed
+
+- **Hero-Section (Startseite)**: Das separate Bild neben dem Textblock wurde
+  entfernt. Stattdessen füllt das Hero-Bild jetzt als Hintergrund die gesamte
+  Section, die Textbox liegt darüber links positioniert (mit Verlaufs-Scrim
+  für Lesbarkeit).
+
 ## [0.3.0] – 2026-07-24
 
 ### Removed
