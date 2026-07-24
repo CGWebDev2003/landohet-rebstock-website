@@ -28,31 +28,26 @@
   overflow: hidden;
 }
 
-.zoom {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  background: rgba(35, 48, 31, 0.24);
-  color: #fff;
-  transition: opacity 0.2s var(--ease);
+.media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 
-.zoom :global(svg) {
-  width: 40px;
-  height: 40px;
+.mediaImg {
+  object-fit: cover;
+  transition: transform 0.3s var(--ease);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .trigger:hover .zoom {
-    opacity: 1;
+  .trigger:hover .mediaImg {
+    transform: scale(1.06);
   }
 }
 
-.trigger:focus-visible .zoom {
-  opacity: 1;
+.trigger:focus-visible .mediaImg {
+  transform: scale(1.06);
 }
 
 /* Lightbox */
@@ -75,8 +70,10 @@
   width: 100%;
 }
 
-.lbFigure :global(div[role="img"]) {
+.lbMedia {
   max-height: 78vh;
+  width: auto;
+  margin-inline: auto;
 }
 
 .lbCaption {

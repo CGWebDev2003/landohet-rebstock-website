@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { Section, SectionHeader } from "@/components/Section/Section";
@@ -34,20 +35,18 @@ export default function Home(): React.ReactElement {
       {/* ===== Hero ===== */}
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroMedia}>
-          <Placeholder
-            label="Landhotel Rebstock im goldenen Abendlicht, umgeben von Reben und Wald"
-            ratio="16/9"
+          <Image
+            src="/impressionen/01-startseite_3.jpg"
+            alt="Landhotel Rebstock im goldenen Abendlicht, umgeben von Reben und Wald"
+            fill
             priority
+            sizes="100vw"
             className={styles.heroImage}
           />
           <div className={styles.heroScrim} aria-hidden="true" />
         </div>
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
-            <p className={styles.heroEyebrow}>
-              <Icon name="mapPin" className={styles.heroPin} />
-              Bottenau · Oberkirch · Schwarzwald
-            </p>
             <h1 id="hero-title" className={styles.heroTitle}>
               Ankommen, wo Wein und Wald sich begegnen.
             </h1>
@@ -64,10 +63,6 @@ export default function Home(): React.ReactElement {
                 {site.phone}
               </Button>
             </div>
-            <p className={styles.heroNote}>
-              <Icon name="check" className={styles.heroCheck} />
-              {directBookingNote}
-            </p>
           </div>
         </div>
       </section>
@@ -117,10 +112,12 @@ export default function Home(): React.ReactElement {
             </div>
           </div>
           <div className={styles.drinksMedia}>
-            <Placeholder
-              label="Gedeckter Tisch mit Badischem Wein und Gläsern im Abendlicht"
-              ratio="4/3"
-              rounded="lg"
+            <Image
+              src="/impressionen/14-restaurant_1.jpg"
+              alt="Gedeckter Tisch mit Badischem Wein und Gläsern im Abendlicht"
+              fill
+              sizes="(min-width: 860px) 45vw, 100vw"
+              className={styles.drinksImage}
             />
           </div>
         </Card>
@@ -152,11 +149,26 @@ export default function Home(): React.ReactElement {
               as="article"
               className={`${styles.roomCard} ${i === 0 ? styles.roomCardWide : ""}`}
             >
-              <Placeholder
-                label={`${room.name} mit Blick ins Renchtal`}
-                ratio={i === 0 ? "16/10" : "4/3"}
-                rounded="md"
-              />
+              {room.image ? (
+                <div
+                  className={styles.roomMedia}
+                  style={{ aspectRatio: (i === 0 ? "16/10" : "4/3").replace("/", " / ") }}
+                >
+                  <Image
+                    src={room.image}
+                    alt={`${room.name} mit Blick ins Renchtal`}
+                    fill
+                    sizes="(min-width: 720px) 50vw, 100vw"
+                    className={styles.roomMediaImg}
+                  />
+                </div>
+              ) : (
+                <Placeholder
+                  label={`${room.name} mit Blick ins Renchtal`}
+                  ratio={i === 0 ? "16/10" : "4/3"}
+                  rounded="md"
+                />
+              )}
               <div className={styles.roomBody}>
                 <div className={styles.roomHead}>
                   <h3 className={styles.roomName}>{room.name}</h3>
@@ -220,11 +232,12 @@ export default function Home(): React.ReactElement {
             </Card>
           ))}
           <div className={styles.regionMedia}>
-            <Placeholder
-              label="Panorama über die Rebhänge des Renchtals im Morgenlicht"
-              ratio="3/4"
-              rounded="lg"
-              play
+            <Image
+              src="/impressionen/rebstockxxl-20b.jpg"
+              alt="Panorama über die Rebhänge des Renchtals im Morgenlicht"
+              fill
+              sizes="(min-width: 860px) 33vw, 100vw"
+              className={styles.regionMediaImg}
             />
           </div>
         </div>
@@ -253,10 +266,12 @@ export default function Home(): React.ReactElement {
             </Button>
           </div>
           <div className={styles.feiernMedia}>
-            <Placeholder
-              label="Festlich gedeckte Tafel im Fürsteneckraum"
-              ratio="4/3"
-              rounded="lg"
+            <Image
+              src="/impressionen/16-feste-feiern_1.jpg"
+              alt="Festlich gedeckte Tafel im Fürsteneckraum"
+              fill
+              sizes="(min-width: 860px) 45vw, 100vw"
+              className={styles.feiernImage}
             />
           </div>
         </Card>
@@ -274,7 +289,14 @@ export default function Home(): React.ReactElement {
           <Button href={bookingUrl} external={bookingIsExternal} size="lg" icon="arrowRight">
             Direkt buchen
           </Button>
-          <Button href={phoneHref} external variant="ghost" size="lg" icon="phone">
+          <Button
+            href={phoneHref}
+            external
+            variant="ghost"
+            size="lg"
+            icon="phone"
+            className={styles.finalGhost}
+          >
             {site.phone}
           </Button>
         </div>

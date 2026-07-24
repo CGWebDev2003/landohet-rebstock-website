@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
@@ -45,13 +46,14 @@ export function Header(): React.ReactElement {
     >
       <div className={styles.bar}>
         <Link href="/" className={styles.brand} aria-label={`${site.name}, zur Startseite`}>
-          <span className={styles.brandMark}>
-            <Icon name="leaf" />
-          </span>
-          <span className={styles.brandText}>
-            <span className={styles.brandName}>Landhotel Rebstock</span>
-            <span className={styles.brandSub}>Bottenau · Schwarzwald</span>
-          </span>
+          <Image
+            src="/logo.png"
+            alt={site.name}
+            width={700}
+            height={145}
+            priority
+            className={styles.brandLogo}
+          />
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Hauptnavigation">

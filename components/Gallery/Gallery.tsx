@@ -1,11 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "./Gallery.module.css";
-import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { Icon } from "@/components/Icon/Icon";
 
 export interface GalleryItem {
+  readonly src: string;
   readonly label: string;
   readonly ratio: "4/3" | "3/2" | "1/1" | "16/10" | "3/4";
 }
@@ -17,8 +18,6 @@ interface GalleryProps {
 /**
  * Masonry-artige Galerie mit Lightbox. Client-Komponente wegen Overlay-State,
  * Tastatursteuerung (Esc, Pfeile) und Fokus-Handling.
- *
- * BILDER-TODO: Die <Placeholder> hier später durch <Image> ersetzen.
  */
 export function Gallery({ items }: GalleryProps): React.ReactElement {
   const [open, setOpen] = useState<number | null>(null);
@@ -58,10 +57,15 @@ export function Gallery({ items }: GalleryProps): React.ReactElement {
               onClick={() => setOpen(i)}
               aria-label={`Bild vergrößern: ${item.label}`}
             >
-              <Placeholder label={item.label} ratio={item.ratio} rounded="lg" />
-              <span className={styles.zoom} aria-hidden="true">
-                <Icon name="play" />
-              </span>
+              <div className={styles.media} style={{ aspectRatio: item.ratio.replace("/", " / ") }}>
+                <Image
+                  src={item.src}
+                  alt={item.label}
+                  fill
+                  sizes="(min-width: 960px) 33vw, (min-width: 600px) 50vw, 100vw"
+                  className={styles.mediaImg}
+                />
+              </div>
             </button>
           </li>
         ))}
@@ -91,7 +95,18 @@ export function Gallery({ items }: GalleryProps): React.ReactElement {
             <Icon name="arrowRight" />
           </button>
           <figure className={styles.lbFigure} onClick={(e) => e.stopPropagation()}>
-            <Placeholder label={items[open].label} ratio={items[open].ratio} rounded="lg" />
+            <div
+              className={`${styles.media} ${styles.lbMedia}`}
+              style={{ aspectRatio: items[open].ratio.replace("/", " / ") }}
+            >
+              <Image
+                src={items[open].src}
+                alt={items[open].label}
+                fill
+                sizes="90vw"
+                className={styles.mediaImg}
+              />
+            </div>
             <figcaption className={styles.lbCaption}>{items[open].label}</figcaption>
           </figure>
           <button
