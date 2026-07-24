@@ -28,6 +28,17 @@
   overflow: hidden;
 }
 
+.media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.mediaImg {
+  object-fit: cover;
+}
+
 .zoom {
   position: absolute;
   inset: 0;
@@ -75,8 +86,10 @@
   width: 100%;
 }
 
-.lbFigure :global(div[role="img"]) {
+.lbMedia {
   max-height: 78vh;
+  width: auto;
+  margin-inline: auto;
 }
 
 .lbCaption {
