@@ -274,7 +274,14 @@ export default function Home(): React.ReactElement {
           <Button href={bookingUrl} external={bookingIsExternal} size="lg" icon="arrowRight">
             Direkt buchen
           </Button>
-          <Button href={phoneHref} external variant="ghost" size="lg" icon="phone">
+          <Button
+            href={phoneHref}
+            external
+            variant="ghost"
+            size="lg"
+            icon="phone"
+            className={styles.finalGhost}
+          >
             {site.phone}
           </Button>
         </div>
