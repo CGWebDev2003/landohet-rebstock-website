@@ -39,41 +39,15 @@
   min-height: 44px;
 }
 
-.brandMark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-pill);
-  background: var(--color-forest);
-  color: var(--color-sand);
-  flex: none;
+.brandLogo {
+  height: 2.5rem;
+  width: auto;
 }
 
-.brandMark :global(svg) {
-  width: 22px;
-  height: 22px;
-}
-
-.brandText {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.brandName {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--color-heading);
-}
-
-.brandSub {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-muted);
+@media (min-width: 600px) {
+  .brandLogo {
+    height: 3rem;
+  }
 }
 
 /* --- Desktop-Navigation ------------------------------------------------- */
