@@ -4,8 +4,9 @@
   isolation: isolate;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
-  min-height: clamp(520px, 92vh, 880px);
+  align-items: center;
+  height: 100vh;
+  height: 100dvh;
   padding-top: var(--header-h);
 }
 
@@ -34,7 +35,7 @@
   width: 100%;
   max-width: var(--container);
   margin-inline: auto;
-  padding: 0 var(--space-5) var(--space-10);
+  padding: 0 var(--space-5);
 }
 
 .heroContent {
