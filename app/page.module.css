@@ -375,14 +375,14 @@
 
 /* Ghost-Button auf dunklem Waldgrün-Hintergrund braucht helle Kontrastfarben. */
 .finalGhost {
-  color: var(--color-cream);
+  color: var(--color-cream) !important;
   border-color: rgba(245, 242, 234, 0.4);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .finalGhost:hover {
-    background: var(--color-cream);
-    color: var(--color-forest-800);
+    background: var(--color-cream) !important;
+    color: var(--color-forest-800) !important;
     border-color: var(--color-cream);
   }
 }
