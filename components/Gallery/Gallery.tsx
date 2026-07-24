@@ -66,9 +66,6 @@ export function Gallery({ items }: GalleryProps): React.ReactElement {
                   className={styles.mediaImg}
                 />
               </div>
-              <span className={styles.zoom} aria-hidden="true">
-                <Icon name="play" />
-              </span>
             </button>
           </li>
         ))}
