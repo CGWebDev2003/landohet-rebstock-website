@@ -48,25 +48,7 @@
   max-width: 520px;
 }
 
-.heroEyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-forest);
-}
-
-.heroPin {
-  width: 18px;
-  height: 18px;
-  color: var(--color-sand-600);
-}
-
 .heroTitle {
-  margin-top: var(--space-3);
   font-size: clamp(2rem, 1.3rem + 3.5vw, 3.5rem);
   line-height: 1.03;
 }

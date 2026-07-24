@@ -47,10 +47,6 @@ export default function Home(): React.ReactElement {
         </div>
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
-            <p className={styles.heroEyebrow}>
-              <Icon name="mapPin" className={styles.heroPin} />
-              Bottenau · Oberkirch · Schwarzwald
-            </p>
             <h1 id="hero-title" className={styles.heroTitle}>
               Ankommen, wo Wein und Wald sich begegnen.
             </h1>
