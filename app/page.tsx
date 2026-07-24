@@ -63,10 +63,6 @@ export default function Home(): React.ReactElement {
                 {site.phone}
               </Button>
             </div>
-            <p className={styles.heroNote}>
-              <Icon name="check" className={styles.heroCheck} />
-              {directBookingNote}
-            </p>
           </div>
         </div>
       </section>

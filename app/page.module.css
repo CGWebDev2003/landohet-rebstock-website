@@ -67,21 +67,6 @@
   gap: var(--space-3);
 }
 
-.heroNote {
-  margin-top: var(--space-4);
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  color: var(--color-forest);
-  font-weight: 500;
-}
-
-.heroCheck {
-  width: 18px;
-  height: 18px;
-  color: var(--color-sand-600);
-}
 
 @media (min-width: 860px) {
   .heroContent {
