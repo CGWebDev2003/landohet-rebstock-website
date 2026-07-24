@@ -37,36 +37,38 @@ export default function Home(): React.ReactElement {
           <Placeholder
             label="Landhotel Rebstock im goldenen Abendlicht, umgeben von Reben und Wald"
             ratio="16/9"
-            rounded="xl"
             priority
             className={styles.heroImage}
           />
+          <div className={styles.heroScrim} aria-hidden="true" />
         </div>
-        <div className={styles.heroContent}>
-          <p className={styles.heroEyebrow}>
-            <Icon name="mapPin" className={styles.heroPin} />
-            Bottenau · Oberkirch · Schwarzwald
-          </p>
-          <h1 id="hero-title" className={styles.heroTitle}>
-            Ankommen, wo Wein und Wald sich begegnen.
-          </h1>
-          <p className={styles.heroLead}>
-            Ein familiengeführtes Bed-&-Breakfast im ruhigen Winzerdorf Bottenau —
-            abseits vom Durchgangsverkehr, mit Blick ins Renchtal und in den
-            Schwarzwald. Herzlich willkommen bei Familie Noack.
-          </p>
-          <div className={styles.heroCtas}>
-            <Button href={bookingUrl} external={bookingIsExternal} size="lg" icon="arrowRight">
-              Direkt buchen
-            </Button>
-            <Button href={phoneHref} external variant="ghost" size="lg" icon="phone">
-              {site.phone}
-            </Button>
+        <div className={styles.heroInner}>
+          <div className={styles.heroContent}>
+            <p className={styles.heroEyebrow}>
+              <Icon name="mapPin" className={styles.heroPin} />
+              Bottenau · Oberkirch · Schwarzwald
+            </p>
+            <h1 id="hero-title" className={styles.heroTitle}>
+              Ankommen, wo Wein und Wald sich begegnen.
+            </h1>
+            <p className={styles.heroLead}>
+              Ein familiengeführtes Bed-&-Breakfast im ruhigen Winzerdorf Bottenau —
+              abseits vom Durchgangsverkehr, mit Blick ins Renchtal und in den
+              Schwarzwald. Herzlich willkommen bei Familie Noack.
+            </p>
+            <div className={styles.heroCtas}>
+              <Button href={bookingUrl} external={bookingIsExternal} size="lg" icon="arrowRight">
+                Direkt buchen
+              </Button>
+              <Button href={phoneHref} external variant="ghost" size="lg" icon="phone">
+                {site.phone}
+              </Button>
+            </div>
+            <p className={styles.heroNote}>
+              <Icon name="check" className={styles.heroCheck} />
+              {directBookingNote}
+            </p>
           </div>
-          <p className={styles.heroNote}>
-            <Icon name="check" className={styles.heroCheck} />
-            {directBookingNote}
-          </p>
         </div>
       </section>
 
