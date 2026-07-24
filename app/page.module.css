@@ -322,6 +322,18 @@
   max-width: 52ch;
 }
 
+.feiernMedia {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.feiernImage {
+  object-fit: cover;
+}
+
 @media (min-width: 860px) {
   .feiernCard {
     grid-template-columns: 1.3fr 1fr;

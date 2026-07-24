@@ -251,10 +251,12 @@ export default function Home(): React.ReactElement {
             </Button>
           </div>
           <div className={styles.feiernMedia}>
-            <Placeholder
-              label="Festlich gedeckte Tafel im Fürsteneckraum"
-              ratio="4/3"
-              rounded="lg"
+            <Image
+              src="/impressionen/16-feste-feiern_1.jpg"
+              alt="Festlich gedeckte Tafel im Fürsteneckraum"
+              fill
+              sizes="(min-width: 860px) 45vw, 100vw"
+              className={styles.feiernImage}
             />
           </div>
         </Card>
