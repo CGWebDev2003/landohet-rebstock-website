@@ -25,12 +25,6 @@
   padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
 }
 
-@media (prefers-color-scheme: dark) {
-  .bar {
-    background: rgba(29, 35, 24, 0.82);
-  }
-}
-
 .scrolled {
   padding-top: var(--space-2);
   padding-bottom: var(--space-2);

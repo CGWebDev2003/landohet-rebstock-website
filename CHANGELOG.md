@@ -4,6 +4,15 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.3.0] – 2026-07-24
+
+### Removed
+
+- **Dark Mode**: Die `prefers-color-scheme: dark`-Belegung der Design-Tokens
+  in `app/globals.css` sowie die zugehörigen Overrides in `Button` und
+  `Header` wurden entfernt. Die Seite wird ausschließlich im hellen
+  Farbschema (`color-scheme: light`) ausgeliefert.
+
 ## [0.2.0] – 2026-07-24
 
 ### Added

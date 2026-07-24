@@ -52,12 +52,6 @@
   border-color: var(--color-line);
 }
 
-@media (prefers-color-scheme: dark) {
-  .ghost {
-    color: var(--color-heading);
-  }
-}
-
 @media (hover: hover) and (pointer: fine) {
   .primary:hover {
     background: var(--color-sand-600);
