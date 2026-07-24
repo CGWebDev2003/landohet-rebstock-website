@@ -1,6 +1,7 @@
 /* ===== Hero ===== */
 .hero {
-  position: relative;
+  display: grid;
+  gap: var(--space-8);
   max-width: var(--container);
   margin-inline: auto;
   padding: calc(var(--header-h) + var(--space-8)) var(--space-5) var(--space-10);
@@ -11,17 +12,15 @@
 }
 
 .heroImage {
-  min-height: 60vh;
+  min-height: clamp(240px, 46vw, 420px);
 }
 
 .heroContent {
   position: relative;
-  margin: -14% var(--space-2) 0;
   background: var(--color-surface);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
-  padding: var(--space-8);
-  max-width: 640px;
+  padding: var(--space-6);
 }
 
 .heroEyebrow {
@@ -77,10 +76,19 @@
   color: var(--color-sand-600);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-10);
+  }
+
+  .heroImage {
+    min-height: 100%;
+  }
+
   .heroContent {
-    margin-top: -10%;
-    padding: var(--space-12);
+    padding: var(--space-10);
   }
 }
 
