@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .cols2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cols3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cols4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  height: 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tile:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  color: var(--color-forest);
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+}
+
+.title {
+  font-size: var(--text-xl);
+}
+
+.text {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+/* --- Grün hervorgehobener Fokuspunkt ----------------------------------- */
+.highlight {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: var(--color-cream);
+}
+
+.highlight .title {
+  color: var(--color-cream);
+}
+
+.highlight .text {
+  color: rgba(245, 242, 234, 0.82);
+}
+
+.highlight .iconWrap {
+  background: rgba(245, 242, 234, 0.14);
+  color: var(--color-sand);
+}

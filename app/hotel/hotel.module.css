@@ -1,0 +1,73 @@
+.lead {
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* Überblick-Karten */
+.linkGrid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .linkGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.linkCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
+}
+
+.linkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  color: var(--color-forest);
+}
+
+.linkIcon :global(svg) {
+  width: 24px;
+  height: 24px;
+}
+
+.linkTitle {
+  font-size: var(--text-xl);
+}
+
+.linkText {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  flex: 1;
+}
+
+.linkBtn {
+  align-self: flex-start;
+  padding-left: 0;
+  padding-right: 0;
+}

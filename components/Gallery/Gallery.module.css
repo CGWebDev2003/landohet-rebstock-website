@@ -1,0 +1,132 @@
+.grid {
+  columns: 1;
+  column-gap: var(--space-5);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 960px) {
+  .grid {
+    columns: 3;
+  }
+}
+
+.cell {
+  break-inside: avoid;
+  margin-bottom: var(--space-5);
+}
+
+.trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.zoom {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background: rgba(35, 48, 31, 0.24);
+  color: #fff;
+  transition: opacity 0.2s var(--ease);
+}
+
+.zoom :global(svg) {
+  width: 40px;
+  height: 40px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .trigger:hover .zoom {
+    opacity: 1;
+  }
+}
+
+.trigger:focus-visible .zoom {
+  opacity: 1;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: rgba(20, 24, 15, 0.86);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.lbFigure {
+  max-width: min(90vw, 960px);
+  width: 100%;
+}
+
+.lbFigure :global(div[role="img"]) {
+  max-height: 78vh;
+}
+
+.lbCaption {
+  margin-top: var(--space-3);
+  text-align: center;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-style: italic;
+}
+
+.lbClose {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  background: rgba(245, 242, 234, 0.14);
+  color: var(--color-cream);
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lbNav {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background: rgba(245, 242, 234, 0.14);
+  color: var(--color-cream);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lbNav :global(svg) {
+  width: 24px;
+  height: 24px;
+}
+
+.lbPrev :global(svg) {
+  transform: rotate(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .lbClose:hover,
+  .lbNav:hover {
+    background: rgba(245, 242, 234, 0.26);
+  }
+}

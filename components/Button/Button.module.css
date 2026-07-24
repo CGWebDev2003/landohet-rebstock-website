@@ -1,0 +1,74 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px; /* Touch-Target */
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  border: 1.5px solid transparent;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+  transition: background-color 0.22s var(--ease), color 0.22s var(--ease),
+    border-color 0.22s var(--ease), transform 0.22s var(--ease),
+    box-shadow 0.22s var(--ease);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.lg {
+  min-height: 52px;
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+}
+
+/* --- Primär: Gold-CTA. Dunkelgrüner Text für WCAG-AA-Kontrast auf Gold. -- */
+.primary {
+  background: var(--color-sand);
+  color: var(--color-forest-800);
+  box-shadow: var(--shadow-soft);
+}
+
+/* --- Sekundär: Waldgrün ------------------------------------------------- */
+.secondary {
+  background: var(--color-forest);
+  color: #fff;
+}
+
+/* --- Ghost: Outline ----------------------------------------------------- */
+.ghost {
+  background: transparent;
+  color: var(--color-forest);
+  border-color: var(--color-line);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ghost {
+    color: var(--color-heading);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primary:hover {
+    background: var(--color-sand-600);
+    box-shadow: var(--shadow-card);
+  }
+  .secondary:hover {
+    background: var(--color-forest-700);
+  }
+  .ghost:hover {
+    background: var(--color-forest);
+    color: #fff;
+    border-color: var(--color-forest);
+  }
+}

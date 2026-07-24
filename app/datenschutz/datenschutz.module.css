@@ -1,0 +1,9 @@
+.todo {
+  margin-bottom: var(--space-8);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-sand-600);
+  background: var(--color-sand-100);
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+}

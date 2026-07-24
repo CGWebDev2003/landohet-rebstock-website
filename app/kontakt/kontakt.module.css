@@ -1,0 +1,117 @@
+.layout {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--space-12);
+  }
+}
+
+/* Info-Spalte */
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: calc(var(--header-h) + var(--space-4));
+}
+
+.infoTitle {
+  font-size: var(--text-xl);
+}
+
+.address {
+  font-style: normal;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  min-height: 44px;
+}
+
+.contactIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  color: var(--color-forest);
+}
+
+.contactIcon :global(svg) {
+  width: 22px;
+  height: 22px;
+}
+
+.contactLabel {
+  display: block;
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.contactValue {
+  display: block;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.bookNote {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.formWrap {
+  min-width: 0;
+}
+
+/* Anfahrt */
+.mapLayout {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .mapLayout {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-12);
+  }
+}
+
+.mapInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.directions p {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+}
+
+.directionsTitle {
+  font-size: var(--text-lg);
+}

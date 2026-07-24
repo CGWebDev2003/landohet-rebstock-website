@@ -1,0 +1,41 @@
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  color: var(--color-forest);
+}
+
+.icon :global(svg) {
+  width: 24px;
+  height: 24px;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}

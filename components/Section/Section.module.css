@@ -1,0 +1,84 @@
+.section {
+  width: 100%;
+  padding-block: var(--space-16);
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+.narrow {
+  max-width: var(--container-narrow);
+}
+
+.wide {
+  max-width: 1320px;
+}
+
+/* --- Card-Variante: schwebende weiße Fläche auf cremefarbenem Grund ----- */
+.card .inner {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-12) var(--space-8);
+}
+
+/* --- Forest-Variante: grüner Vollflächen-Block ------------------------- */
+.forest {
+  background: var(--color-forest);
+  color: var(--color-cream);
+}
+
+.forest .title,
+.forest .eyebrow {
+  color: var(--color-sand);
+}
+
+.forest .headerText {
+  color: rgba(245, 242, 234, 0.82);
+}
+
+/* --- Header ------------------------------------------------------------- */
+.header {
+  max-width: 62ch;
+  margin-bottom: var(--space-10);
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-size: clamp(1.9rem, 1.2rem + 3vw, 3rem);
+}
+
+.headerText {
+  margin-top: var(--space-4);
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--space-24);
+  }
+  .inner {
+    padding-inline: var(--space-8);
+  }
+  .card .inner {
+    padding: var(--space-20) var(--space-16);
+  }
+}

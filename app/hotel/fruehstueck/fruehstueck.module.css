@@ -1,0 +1,75 @@
+.muted {
+  color: var(--color-muted);
+}
+
+.timesLayout {
+  display: grid;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (min-width: 820px) {
+  .timesLayout {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-12);
+  }
+}
+
+.times {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.timeRow:last-child {
+  border-bottom: none;
+}
+
+.timeLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.timeIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-forest);
+}
+
+.timeValue {
+  color: var(--color-forest);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.terraceCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.terraceIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-forest);
+}
+
+.terraceTitle {
+  font-size: var(--text-xl);
+}
+
+.terraceText {
+  color: var(--color-ink);
+}
