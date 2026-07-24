@@ -1,0 +1,295 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  transition: background-color 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    padding 0.3s var(--ease);
+}
+
+/* Floating: schwebende Card-Leiste über dem Hero */
+.bar {
+  max-width: var(--container);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+}
+
+@media (prefers-color-scheme: dark) {
+  .bar {
+    background: rgba(29, 35, 24, 0.82);
+  }
+}
+
+.scrolled {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+/* --- Brand -------------------------------------------------------------- */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-right: auto;
+  min-height: 44px;
+}
+
+.brandMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: var(--color-forest);
+  color: var(--color-sand);
+  flex: none;
+}
+
+.brandMark :global(svg) {
+  width: 22px;
+  height: 22px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brandName {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.brandSub {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* --- Desktop-Navigation ------------------------------------------------- */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink);
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navLink:hover {
+    background: var(--color-forest-100);
+    color: var(--color-forest);
+  }
+}
+
+.navActive {
+  color: var(--color-forest);
+  font-weight: 600;
+}
+
+/* --- Aktionen ----------------------------------------------------------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.phone {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-forest);
+  border-radius: var(--radius-pill);
+}
+
+.phoneIcon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .phone:hover {
+    background: var(--color-forest-100);
+  }
+}
+
+.book {
+  display: none;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-pill);
+  background: var(--color-sand);
+  color: var(--color-forest-800);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: background-color 0.2s var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .book:hover {
+    background: var(--color-sand-600);
+  }
+}
+
+/* --- Burger ------------------------------------------------------------- */
+.burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background: var(--color-forest);
+  color: #fff;
+}
+
+.burgerBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 20px;
+  height: 16px;
+}
+
+.burgerBox span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease), opacity 0.2s var(--ease);
+}
+
+.burgerBox[data-open="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.burgerBox[data-open="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.burgerBox[data-open="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* --- Mobiles Panel ------------------------------------------------------ */
+.mobilePanel {
+  max-width: var(--container);
+  margin: var(--space-2) auto 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-4);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0 var(--space-3);
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-heading);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.mobileLink:last-child {
+  border-bottom: none;
+}
+
+.mobileArrow {
+  width: 20px;
+  height: 20px;
+  color: var(--color-sand-600);
+}
+
+.mobileFooter {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mobilePhone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.mobilePhone :global(svg) {
+  width: 20px;
+  height: 20px;
+}
+
+.mobileBook {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border-radius: var(--radius-pill);
+  background: var(--color-sand);
+  color: var(--color-forest-800);
+  font-weight: 700;
+}
+
+.mobileNote {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* --- Ab Tablet: volle Leiste, kein Burger ------------------------------- */
+@media (min-width: 900px) {
+  .desktopNav {
+    display: flex;
+  }
+  .phone,
+  .book {
+    display: inline-flex;
+  }
+  .burger,
+  .mobilePanel {
+    display: none;
+  }
+}

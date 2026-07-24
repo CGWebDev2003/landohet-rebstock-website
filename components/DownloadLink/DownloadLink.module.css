@@ -1,0 +1,38 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-forest);
+  transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-sand-600);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:not(.pending):hover {
+    border-color: var(--color-forest);
+    background: var(--color-forest-100);
+  }
+}
+
+.note {
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.pending {
+  color: var(--color-muted);
+  cursor: not-allowed;
+  border-style: dashed;
+}

@@ -1,0 +1,48 @@
+.prose {
+  max-width: 68ch;
+  color: var(--color-ink);
+}
+
+.prose > * + * {
+  margin-top: var(--space-4);
+}
+
+.prose :global(h2) {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2rem);
+  margin-top: var(--space-10);
+}
+
+.prose :global(h3) {
+  font-size: var(--text-xl);
+  margin-top: var(--space-8);
+}
+
+.prose :global(p),
+.prose :global(li) {
+  color: var(--color-muted);
+}
+
+.prose :global(strong) {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.prose :global(a) {
+  color: var(--color-forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--color-sand);
+  text-underline-offset: 3px;
+}
+
+.prose :global(ul) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: var(--space-5);
+  list-style: disc;
+}
+
+.prose :global(li)::marker {
+  color: var(--color-sand-600);
+}

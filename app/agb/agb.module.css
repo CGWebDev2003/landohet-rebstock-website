@@ -1,0 +1,84 @@
+.stornoBox {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-forest);
+  color: var(--color-cream);
+  box-shadow: var(--shadow-card);
+}
+
+.stornoHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.stornoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: var(--radius-md);
+  background: rgba(245, 242, 234, 0.14);
+  color: var(--color-sand);
+}
+
+.stornoIcon :global(svg) {
+  width: 26px;
+  height: 26px;
+}
+
+.stornoTitle {
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  color: var(--color-cream);
+}
+
+.stornoList {
+  display: flex;
+  flex-direction: column;
+}
+
+.stornoRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "when fee"
+    "note note";
+  gap: var(--space-1) var(--space-4);
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-top: 1px solid rgba(245, 242, 234, 0.16);
+}
+
+.stornoWhen {
+  grid-area: when;
+  font-weight: 600;
+  color: var(--color-cream);
+}
+
+.stornoFee {
+  grid-area: fee;
+  justify-self: end;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-sand);
+  line-height: 1;
+}
+
+.stornoNote {
+  grid-area: note;
+  font-size: var(--text-xs);
+  color: rgba(245, 242, 234, 0.7);
+}
+
+.stornoHint {
+  margin-top: var(--space-5);
+  font-size: var(--text-sm);
+  color: rgba(245, 242, 234, 0.8);
+}
+
+.textSection {
+  padding-top: var(--space-8);
+}

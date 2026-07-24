@@ -1,0 +1,135 @@
+.tableWrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  text-align: left;
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  background: var(--color-cream-200);
+  font-weight: 600;
+}
+
+.table tbody td {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-line);
+  vertical-align: top;
+}
+
+.cat {
+  display: block;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.note {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  max-width: 42ch;
+}
+
+.occ {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+.priceCol {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.priceCol strong {
+  color: var(--color-forest);
+  font-size: var(--text-lg);
+}
+
+/* Nebenkosten-Kärtchen */
+.notesGrid {
+  margin-top: var(--space-6);
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .notesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .notesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.noteCard {
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.noteLabel {
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.noteValue {
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+}
+
+/* Inklusive-Layout */
+.included {
+  display: grid;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+@media (min-width: 880px) {
+  .included {
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-12);
+  }
+}
+
+.directCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: calc(var(--header-h) + var(--space-4));
+}
+
+.directTitle {
+  font-size: var(--text-xl);
+  color: var(--color-cream);
+}
+
+.directText {
+  color: rgba(245, 242, 234, 0.85);
+  font-size: var(--text-sm);
+}
+
+.directHint {
+  font-size: var(--text-xs);
+  color: rgba(245, 242, 234, 0.6);
+}

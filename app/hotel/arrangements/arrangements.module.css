@@ -1,0 +1,72 @@
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-card);
+  height: 100%;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  color: var(--color-forest);
+}
+
+.icon :global(svg) {
+  width: 26px;
+  height: 26px;
+}
+
+.title {
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
+}
+
+.desc {
+  color: var(--color-muted);
+}
+
+.actions {
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+/* Grün hervorgehobener Fokuspunkt */
+.highlight {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: var(--color-cream);
+}
+
+.highlight .title {
+  color: var(--color-cream);
+}
+
+.highlight .desc {
+  color: rgba(245, 242, 234, 0.85);
+}
+
+.highlight .icon {
+  background: rgba(245, 242, 234, 0.14);
+  color: var(--color-sand);
+}

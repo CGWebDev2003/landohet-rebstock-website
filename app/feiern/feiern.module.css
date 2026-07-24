@@ -1,0 +1,220 @@
+.muted {
+  color: var(--color-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* Räume */
+.roomGrid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .roomGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.roomCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-soft);
+  height: 100%;
+}
+
+.roomIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  color: var(--color-forest);
+}
+
+.roomIcon :global(svg) {
+  width: 26px;
+  height: 26px;
+}
+
+.capacity {
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-sand-600);
+  font-weight: 600;
+}
+
+.roomName {
+  font-size: var(--text-xl);
+}
+
+.roomText {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.highlight {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+}
+
+.highlight .roomName {
+  color: var(--color-cream);
+}
+
+.highlight .roomText {
+  color: rgba(245, 242, 234, 0.85);
+}
+
+.highlight .roomIcon {
+  background: rgba(245, 242, 234, 0.14);
+  color: var(--color-sand);
+}
+
+.highlight .capacity {
+  color: var(--color-sand);
+}
+
+/* Anlässe */
+.occGrid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 560px) {
+  .occGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .occGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.occ {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: center;
+  align-items: center;
+}
+
+.occIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  background: var(--color-sand-100);
+  color: var(--color-forest);
+}
+
+.occIcon :global(svg) {
+  width: 28px;
+  height: 28px;
+}
+
+.occTitle {
+  font-size: var(--text-lg);
+}
+
+.occText {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.kidsCard {
+  margin-top: var(--space-10);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-direction: column;
+  text-align: center;
+}
+
+.kidsIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-sand);
+  flex: none;
+}
+
+.kidsText {
+  color: rgba(245, 242, 234, 0.9);
+}
+
+@media (min-width: 640px) {
+  .kidsCard {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* Hochzeitsautos */
+.carGrid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .carGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.carCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.carBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.carIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(245, 242, 234, 0.12);
+  color: var(--color-sand);
+}
+
+.carIcon :global(svg) {
+  width: 24px;
+  height: 24px;
+}
+
+.carName {
+  font-size: var(--text-xl);
+  color: var(--color-cream);
+}
+
+.carText {
+  font-size: var(--text-sm);
+  color: rgba(245, 242, 234, 0.82);
+}
