@@ -29,6 +29,7 @@ export const rooms: readonly Room[] = [
       "Einzelbelegung gegen Aufpreis möglich",
     ],
     ratio: "4/3",
+    image: "/impressionen/10-zimmer1_imtext_1.jpg",
   },
   {
     slug: "dreibettzimmer",
