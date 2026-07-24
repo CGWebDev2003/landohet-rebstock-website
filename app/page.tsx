@@ -36,7 +36,7 @@ export default function Home(): React.ReactElement {
       <section className={styles.hero} aria-labelledby="hero-title">
         <div className={styles.heroMedia}>
           <Image
-            src="/01-startseite_3.jpg"
+            src="/impressionen/01-startseite_3.jpg"
             alt="Landhotel Rebstock im goldenen Abendlicht, umgeben von Reben und Wald"
             fill
             priority
