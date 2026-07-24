@@ -149,11 +149,26 @@ export default function Home(): React.ReactElement {
               as="article"
               className={`${styles.roomCard} ${i === 0 ? styles.roomCardWide : ""}`}
             >
-              <Placeholder
-                label={`${room.name} mit Blick ins Renchtal`}
-                ratio={i === 0 ? "16/10" : "4/3"}
-                rounded="md"
-              />
+              {room.image ? (
+                <div
+                  className={styles.roomMedia}
+                  style={{ aspectRatio: (i === 0 ? "16/10" : "4/3").replace("/", " / ") }}
+                >
+                  <Image
+                    src={room.image}
+                    alt={`${room.name} mit Blick ins Renchtal`}
+                    fill
+                    sizes="(min-width: 720px) 50vw, 100vw"
+                    className={styles.roomMediaImg}
+                  />
+                </div>
+              ) : (
+                <Placeholder
+                  label={`${room.name} mit Blick ins Renchtal`}
+                  ratio={i === 0 ? "16/10" : "4/3"}
+                  rounded="md"
+                />
+              )}
               <div className={styles.roomBody}>
                 <div className={styles.roomHead}>
                   <h3 className={styles.roomName}>{room.name}</h3>

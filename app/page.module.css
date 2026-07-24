@@ -162,6 +162,17 @@
   padding: 0 var(--space-2) var(--space-2);
 }
 
+.roomMedia {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.roomMediaImg {
+  object-fit: cover;
+}
+
 .roomHead {
   display: flex;
   justify-content: space-between;
@@ -205,7 +216,8 @@
     grid-column: 1 / -1;
     flex-direction: row;
   }
-  .roomCardWide > :global(div[role="img"]) {
+  .roomCardWide > :global(div[role="img"]),
+  .roomCardWide > .roomMedia {
     flex: 1.4;
   }
   .roomCardWide .roomBody {

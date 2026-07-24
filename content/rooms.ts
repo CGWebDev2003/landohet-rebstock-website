@@ -7,8 +7,9 @@ export interface Room {
   readonly balcony: boolean;
   readonly description: string;
   readonly details: readonly string[];
-  /** Seitenverhältnis des Platzhalterbildes. */
+  /** Seitenverhältnis des Platzhalterbildes bzw. von `image`. */
   readonly ratio: "4/3" | "3/2" | "16/10";
+  readonly image?: string;
 }
 
 export const rooms: readonly Room[] = [
@@ -62,6 +63,7 @@ export const rooms: readonly Room[] = [
       "Kinderermäßigung möglich",
     ],
     ratio: "4/3",
+    image: "/impressionen/familienzimmer20.jpg",
   },
   {
     slug: "xl-familienzimmer",
