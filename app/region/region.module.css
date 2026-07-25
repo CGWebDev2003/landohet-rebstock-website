@@ -136,6 +136,15 @@
   border-radius: 0;
 }
 
+.destImageWrap {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+
+.destImage {
+  object-fit: cover;
+}
+
 .destBody {
   padding: var(--space-5);
   display: flex;

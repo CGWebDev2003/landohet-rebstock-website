@@ -4,6 +4,15 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.4.1] – 2026-07-25
+
+### Changed
+
+- **Region-Seite**: Die Ausflugsziel-Karten „Oberkirch mit der Schauenburg"
+  und „Durbach & Schloss Staufenberg" zeigen jetzt echte Fotos
+  (`schauenburg1.jpg`, `staufenburg.jpg`) via `next/image` (`fill`, `sizes`)
+  statt des Platzhalters. Ziele ohne Foto behalten den Platzhalter.
+
 ## [0.4.0] – 2026-07-25
 
 ### Added

@@ -37,16 +37,20 @@ export interface Destination {
   readonly name: string;
   readonly text: string;
   readonly distance?: string;
+  /** Pfad zum Foto in /public. Ohne Angabe wird ein Platzhalter gezeigt. */
+  readonly image?: string;
 }
 
 export const destinations: readonly Destination[] = [
   {
     name: "Oberkirch mit der Schauenburg",
     text: "Fachwerkstädtchen im Renchtal mit malerischer Burgruine über den Reben.",
+    image: "/impressionen/schauenburg1.jpg",
   },
   {
     name: "Durbach & Schloss Staufenberg",
     text: "Bekanntes Weindorf mit Schloss und weitem Blick in die Rheinebene.",
+    image: "/impressionen/staufenburg.jpg",
   },
   {
     name: "Elsass & Straßburg",
