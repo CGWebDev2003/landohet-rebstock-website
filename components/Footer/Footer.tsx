@@ -5,6 +5,7 @@ import { mainNav, hotelNav, legalNav } from "@/content/nav";
 import { partners } from "@/content/partners";
 import { bookingUrl, bookingIsExternal, directBookingNote } from "@/content/booking";
 import { Icon } from "@/components/Icon/Icon";
+import { CookieSettingsLink } from "@/components/CookieConsent/CookieSettingsLink";
 
 /** Globaler Footer mit Kontaktdaten, Navigation, Partner-Logos und Recht. */
 export function Footer(): React.ReactElement {
@@ -68,6 +69,9 @@ export function Footer(): React.ReactElement {
                 <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
+            <li>
+              <CookieSettingsLink className={styles.linkButton} />
+            </li>
           </ul>
         </nav>
       </div>

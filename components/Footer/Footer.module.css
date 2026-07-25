@@ -95,16 +95,19 @@
   gap: var(--space-1);
 }
 
-.linkCol a {
+.linkCol a,
+.linkButton {
   display: inline-flex;
   align-items: center;
   min-height: 40px;
   color: rgba(245, 242, 234, 0.85);
   font-size: var(--text-sm);
+  text-align: left;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .linkCol a:hover {
+  .linkCol a:hover,
+  .linkButton:hover {
     color: var(--color-sand);
   }
 }

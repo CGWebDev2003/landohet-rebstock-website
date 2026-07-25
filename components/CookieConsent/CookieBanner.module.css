@@ -1,0 +1,131 @@
+.banner {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 300;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-line);
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.28s ease-out;
+}
+
+.inner {
+  max-width: var(--container);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-heading);
+}
+
+.body {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 70ch;
+}
+
+.link {
+  color: var(--color-forest);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: var(--color-forest-700);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.primary {
+  background: var(--color-forest);
+  color: var(--color-cream);
+}
+
+.secondary {
+  background: var(--color-forest-100);
+  color: var(--color-forest-800);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primary:hover {
+    background: var(--color-forest-700);
+  }
+  .secondary:hover {
+    background: var(--color-forest-100);
+    color: var(--color-forest);
+  }
+  .ghost:hover {
+    border-color: var(--color-forest);
+    color: var(--color-forest);
+  }
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+@media (min-width: 860px) {
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+  }
+  .actions {
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    animation: none;
+  }
+}
