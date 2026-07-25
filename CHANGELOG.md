@@ -4,6 +4,14 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.4.2] – 2026-07-25
+
+### Fixed
+
+- **Region-Seite**: Die beiden Tipp-Boxen der Aktivitäten-Karten (Wandern,
+  Radfahren) stehen jetzt unabhängig von der Länge des Intro-Textes auf
+  gleicher Höhe (`margin-top: auto`).
+
 ## [0.4.1] – 2026-07-25
 
 ### Changed

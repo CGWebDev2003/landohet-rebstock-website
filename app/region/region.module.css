@@ -63,6 +63,9 @@
 }
 
 .tip {
+  /* Tipp-Box an den unteren Kartenrand schieben, damit die Boxen beider
+     Karten trotz unterschiedlich langer Intro-Texte auf gleicher Höhe stehen. */
+  margin-top: auto;
   padding: var(--space-5);
   border-radius: var(--radius-md);
   background: var(--color-sand-100);
