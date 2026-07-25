@@ -4,6 +4,14 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.4.3] – 2026-07-25
+
+### Fixed
+
+- **Region-Seite**: Das Stern-Icon der Tipp-Boxen sitzt jetzt auf der ersten
+  Titelzeile, auch wenn der Titel über zwei Zeilen umbricht (statt vertikal
+  zentriert zwischen beiden Zeilen).
+
 ## [0.4.2] – 2026-07-25
 
 ### Fixed

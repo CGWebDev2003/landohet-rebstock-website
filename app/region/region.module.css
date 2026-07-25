@@ -74,7 +74,7 @@
 
 .tipTitle {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-2);
   font-weight: 600;
   color: var(--color-forest);
@@ -82,7 +82,9 @@
 
 .tipStar {
   width: 18px;
-  height: 18px;
+  /* Höhe = eine Zeile, damit das zentrierte Icon (viewBox, xMidYMid) auf der
+     ersten Titelzeile sitzt, auch wenn der Titel umbricht. */
+  height: 1lh;
   color: var(--color-sand-600);
   flex: none;
 }
