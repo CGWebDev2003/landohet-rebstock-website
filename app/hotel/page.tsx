@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import styles from "./hotel.module.css";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section, SectionHeader } from "@/components/Section/Section";
 import { Card } from "@/components/Card/Card";
 import { Button } from "@/components/Button/Button";
-import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { SplitBlock } from "@/components/SplitBlock/SplitBlock";
 import { CheckList } from "@/components/CheckList/CheckList";
 import { IconTile, IconTileGrid } from "@/components/IconTile/IconTile";
@@ -41,11 +41,15 @@ export default function HotelPage(): React.ReactElement {
       <Section>
         <SplitBlock
           media={
-            <Placeholder
-              label="Blick vom Balkon eines Zimmers ins Renchtal und in den Schwarzwald"
-              ratio="4/3"
-              rounded="lg"
-            />
+            <div className={styles.welcomeMedia}>
+              <Image
+                src="/impressionen/17-region_1.jpg"
+                alt="Blick vom Balkon eines Zimmers ins Renchtal und in den Schwarzwald"
+                fill
+                sizes="(min-width: 860px) 45vw, 100vw"
+                className={styles.welcomeImage}
+              />
+            </div>
           }
         >
           <SectionHeader
