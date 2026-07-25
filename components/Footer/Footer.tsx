@@ -59,6 +59,17 @@ export function Footer(): React.ReactElement {
             ))}
           </ul>
         </nav>
+
+        <nav className={styles.linkCol} aria-label="Rechtliches">
+          <p className={styles.colTitle}>Rechtliches</p>
+          <ul>
+            {legalNav.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
 
       {/* Partner-Logos */}
@@ -78,13 +89,17 @@ export function Footer(): React.ReactElement {
         <p className={styles.copy}>
           © {new Date().getFullYear()} {site.name} · Inhaber {site.owner}
         </p>
-        <nav className={styles.legal} aria-label="Rechtliches">
-          {legalNav.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <p className={styles.credit}>
+          Designed &amp; Developed by{" "}
+          <a
+            href="https://grahmdigital.de"
+            className={styles.creditLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Grahm Digital
+          </a>
+        </p>
       </div>
     </footer>
   );
