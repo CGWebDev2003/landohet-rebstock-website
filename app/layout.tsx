@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
+import { ConsentProvider } from "@/components/CookieConsent/ConsentProvider";
 import { site } from "@/content/site";
 
 const cormorant = Cormorant_Garamond({
@@ -50,9 +51,11 @@ export default function RootLayout({
         <a href="#inhalt" className="srOnly">
           Zum Inhalt springen
         </a>
-        <Header />
-        <main id="inhalt">{children}</main>
-        <Footer />
+        <ConsentProvider>
+          <Header />
+          <main id="inhalt">{children}</main>
+          <Footer />
+        </ConsentProvider>
       </body>
     </html>
   );

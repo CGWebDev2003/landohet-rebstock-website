@@ -63,6 +63,9 @@
 }
 
 .tip {
+  /* Tipp-Box an den unteren Kartenrand schieben, damit die Boxen beider
+     Karten trotz unterschiedlich langer Intro-Texte auf gleicher Höhe stehen. */
+  margin-top: auto;
   padding: var(--space-5);
   border-radius: var(--radius-md);
   background: var(--color-sand-100);
@@ -71,7 +74,7 @@
 
 .tipTitle {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-2);
   font-weight: 600;
   color: var(--color-forest);
@@ -79,7 +82,9 @@
 
 .tipStar {
   width: 18px;
-  height: 18px;
+  /* Höhe = eine Zeile, damit das zentrierte Icon (viewBox, xMidYMid) auf der
+     ersten Titelzeile sitzt, auch wenn der Titel umbricht. */
+  height: 1lh;
   color: var(--color-sand-600);
   flex: none;
 }
@@ -134,6 +139,15 @@
 
 .destMedia :global(div[role="img"]) {
   border-radius: 0;
+}
+
+.destImageWrap {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+
+.destImage {
+  object-fit: cover;
 }
 
 .destBody {

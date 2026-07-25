@@ -4,6 +4,54 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.4.3] – 2026-07-25
+
+### Fixed
+
+- **Region-Seite**: Das Stern-Icon der Tipp-Boxen sitzt jetzt auf der ersten
+  Titelzeile, auch wenn der Titel über zwei Zeilen umbricht (statt vertikal
+  zentriert zwischen beiden Zeilen).
+
+## [0.4.2] – 2026-07-25
+
+### Fixed
+
+- **Region-Seite**: Die beiden Tipp-Boxen der Aktivitäten-Karten (Wandern,
+  Radfahren) stehen jetzt unabhängig von der Länge des Intro-Textes auf
+  gleicher Höhe (`margin-top: auto`).
+
+## [0.4.1] – 2026-07-25
+
+### Changed
+
+- **Region-Seite**: Die Ausflugsziel-Karten „Oberkirch mit der Schauenburg"
+  und „Durbach & Schloss Staufenberg" zeigen jetzt echte Fotos
+  (`schauenburg1.jpg`, `staufenburg.jpg`) via `next/image` (`fill`, `sizes`)
+  statt des Platzhalters. Ziele ohne Foto behalten den Platzhalter.
+
+## [0.4.0] – 2026-07-25
+
+### Added
+
+- **Cookie-Consent**: Voll funktionsfähiges Einwilligungsbanner mit den
+  Optionen „Alle akzeptieren", „Nur notwendige" und „Einstellungen". Über
+  einen modalen Dialog lassen sich die optionalen Kategorien (Statistik,
+  Marketing) einzeln zu- oder abwählen; notwendige Cookies sind fest aktiv.
+  Die Auswahl wird als First-Party-Cookie (`rebstock-consent`, 180 Tage)
+  gespeichert und ist die einzige Quelle der Wahrheit (`useSyncExternalStore`).
+- **Footer**: Neuer Link „Cookie-Einstellungen" in der Spalte „Rechtliches",
+  über den sich der Einstellungen-Dialog jederzeit erneut öffnen lässt.
+
+### Changed
+
+- **Footer**: Impressum, Datenschutz und AGB stehen jetzt in einer eigenen
+  Spalte „Rechtliches" im oberen Footer. An ihrer bisherigen Stelle im unteren
+  Footer steht „Designed & Developed by **Grahm Digital**" mit externem Link
+  auf `https://grahmdigital.de`.
+- **Hotel-Seite**: Der Bild-Platzhalter im Willkommens-Block wurde durch das
+  echte Bild (`public/impressionen/17-region_1.jpg`) via `next/image`
+  (`fill`, `sizes`) ersetzt.
+
 ## [0.3.2] – 2026-07-24
 
 ### Changed

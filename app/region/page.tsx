@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import styles from "./region.module.css";
 import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section, SectionHeader } from "@/components/Section/Section";
@@ -65,7 +66,19 @@ export default function RegionPage(): React.ReactElement {
           {destinations.map((d) => (
             <article key={d.name} className={styles.destCard}>
               <div className={styles.destMedia}>
-                <Placeholder label={d.name} ratio="3/2" rounded="md" />
+                {d.image ? (
+                  <div className={styles.destImageWrap}>
+                    <Image
+                      src={d.image}
+                      alt={d.name}
+                      fill
+                      sizes="(min-width: 960px) 33vw, (min-width: 560px) 50vw, 100vw"
+                      className={styles.destImage}
+                    />
+                  </div>
+                ) : (
+                  <Placeholder label={d.name} ratio="3/2" rounded="md" />
+                )}
               </div>
               <div className={styles.destBody}>
                 <div className={styles.destTitleRow}>
