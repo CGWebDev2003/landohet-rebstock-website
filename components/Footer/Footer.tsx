@@ -81,9 +81,14 @@ export function Footer(): React.ReactElement {
       <div className={styles.partners}>
         <p className={styles.partnersTitle}>Partner & Mitgliedschaften</p>
         <ul className={styles.partnerList}>
-          {partners.map((p) =>
-            p.logo ? (
-              <li key={p.name} className={styles.partnerLogo}>
+          {partners.map((p) => (
+            <li key={p.name}>
+              <a
+                href={p.href}
+                className={styles.partnerLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src={p.logo.src}
                   alt={p.name}
@@ -91,14 +96,9 @@ export function Footer(): React.ReactElement {
                   height={p.logo.height}
                   className={styles.partnerImage}
                 />
-              </li>
-            ) : (
-              /* Ohne Logo bleibt der Name als Text-Badge stehen. */
-              <li key={p.name} className={styles.partner}>
-                {p.name}
-              </li>
-            ),
-          )}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 

@@ -12,37 +12,35 @@ export interface PartnerLogo {
 
 export interface Partner {
   readonly name: string;
-  /** Ohne Logo wird der Name als Text-Badge dargestellt. */
-  readonly logo: PartnerLogo | null;
-  readonly href: string | null;
+  readonly logo: PartnerLogo;
+  /** Ziel des Logos — wird im Footer in einem neuen Tab geöffnet. */
+  readonly href: string;
 }
 
 export const partners: readonly Partner[] = [
   {
     name: "Renchtal Tourismus",
     logo: { src: "/partner/logo-renchtal.png", width: 132, height: 80 },
-    href: null,
+    href: "https://www.renchtal-tourismus.de/",
   },
   {
     name: "Schwarzwald Tourismus",
     logo: { src: "/partner/stg-logo_front_large.png", width: 80, height: 80 },
-    href: null,
+    href: "https://www.schwarzwald-tourismus.info/",
   },
   {
     name: "Bett+Bike",
     logo: { src: "/partner/bett-bike.png", width: 64, height: 80 },
-    href: null,
+    href: "https://www.bettundbike.de/",
   },
   {
     name: "Nationalpark Schwarzwald",
     logo: { src: "/partner/logo-nationalpark.png", width: 160, height: 80 },
-    href: null,
+    href: "https://www.nationalpark-schwarzwald.de/",
   },
   {
     name: "booking.com",
     logo: { src: "/partner/logobooking-com.jpg", width: 166, height: 48 },
-    href: null,
+    href: "https://www.booking.com/hotel/de/landhotel-rebstock-oberkirch.de.html",
   },
-  // Ohne Logo — steht deshalb am Ende, damit die Logo-Kacheln zusammenbleiben.
-  { name: "Wanderbares Deutschland", logo: null, href: null },
 ];

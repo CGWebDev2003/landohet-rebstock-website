@@ -19,9 +19,10 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 - **Footer**: Die Partner-Logos aus `/public/partner` werden jetzt über
   `next/image` als helle Kacheln ausgegeben (Renchtal Tourismus, Schwarzwald
   Tourismus, Bett+Bike, Nationalpark Schwarzwald, booking.com). Alle Logos
-  laufen auf einheitlicher Höhe; „Wanderbares Deutschland" bleibt mangels
-  Logo als Text-Badge und steht dafür am Ende der Reihe. `Partner.logo` ist
-  dafür jetzt ein `PartnerLogo`-Objekt aus Pfad, Breite und Höhe.
+  laufen auf einheitlicher Höhe und verlinken in einem neuen Tab auf die
+  jeweilige Partnerseite, inklusive Hover- und Active-State. `Partner.logo`
+  ist dafür ein `PartnerLogo`-Objekt aus Pfad, Breite und Höhe; `logo` und
+  `href` sind jetzt Pflichtfelder.
 
 ### Changed
 
@@ -38,6 +39,8 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - **Kontaktseite**: Der Lageplan-Platzhalter im Abschnitt „Anfahrt" wurde
   entfernt (inkl. des zugehörigen TODO für eine eingebettete Karte).
+- **Footer**: „Wanderbares Deutschland" aus den Partnern entfernt. Damit
+  entfällt auch der Text-Badge-Fallback für Partner ohne Logo.
 - **Faxnummer**: `site.fax` und alle Ausgaben davon entfernt — die
   Kontaktkarte auf der Kontaktseite, die Kontaktangaben im Impressum und
   `faxNumber` in den strukturierten Daten.

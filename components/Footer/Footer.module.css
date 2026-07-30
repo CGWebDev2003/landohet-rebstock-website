@@ -137,13 +137,25 @@
 
 /* Logo-Kachel: heller Grund, damit die Logos mit weißem Hintergrund auf dem
    dunklen Waldgrün sauber stehen. */
-.partnerLogo {
+.partnerLink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-md);
   background: var(--color-surface);
+  transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .partnerLink:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.partnerLink:active {
+  transform: translateY(0);
 }
 
 /* Alle Logos laufen auf einheitlicher Höhe, die Breite ergibt sich aus dem
@@ -154,18 +166,6 @@
   height: var(--space-10);
   width: auto;
   object-fit: contain;
-}
-
-.partner {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0 var(--space-5);
-  border: 1px solid rgba(245, 242, 234, 0.24);
-  border-radius: var(--radius-pill);
-  font-size: var(--text-sm);
-  color: rgba(245, 242, 234, 0.85);
-  background: rgba(245, 242, 234, 0.04);
 }
 
 /* --- Bottom ------------------------------------------------------------- */
