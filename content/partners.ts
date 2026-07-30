@@ -18,14 +18,17 @@ export interface Partner {
 }
 
 /**
- * Qualitätssiegel „Wanderbares Deutschland" — wird prominenter gezeigt als die
- * Partner-Logos (Hero unten rechts, Footer rechts neben der Partner-Reihe).
- * Die Originaldatei ist 553 × 640 px; die Maße an den Einsatzorten halten
- * dieses Seitenverhältnis.
+ * Auszeichnung, die prominenter gezeigt wird als die Partner-Logos: im Hero
+ * unten rechts und im Footer rechts neben der Partner-Reihe.
+ *
+ * Achtung: Der Dateiname stammt noch vom Qualitätssiegel „Wanderbares
+ * Deutschland", die Datei enthält aber den Booking.com Traveller Review Award
+ * 2024. Alt-Text und Maße richten sich nach dem tatsächlichen Inhalt —
+ * quadratisch, 1080 × 1080 px.
  */
-export const qualitySeal = {
+export const awardBadge = {
   src: "/qualitaetssiegel-wanderbares-deutschland-2-663x767-553x640.png",
-  alt: "Qualitätssiegel Wanderbares Deutschland",
+  alt: "Booking.com Traveller Review Award 2024 für das Landhotel Rebstock — 8,9 von 10 Punkten",
 } as const;
 
 export const partners: readonly Partner[] = [

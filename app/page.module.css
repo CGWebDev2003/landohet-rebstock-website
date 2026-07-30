@@ -2,7 +2,7 @@
 .hero {
   /* Höhe des Qualitätssiegels — unten als Freiraum reserviert, damit das
      Siegel auf schmalen Screens nicht über der Hero-Card liegt. */
-  --hero-seal-h: clamp(104px, 15vw, 168px);
+  --hero-seal-h: clamp(112px, 16vw, 200px);
   position: relative;
   isolation: isolate;
   overflow: hidden;

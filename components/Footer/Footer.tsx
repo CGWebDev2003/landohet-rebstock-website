@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 import { site, emailHref } from "@/content/site";
 import { mainNav, hotelNav, legalNav } from "@/content/nav";
-import { partners, qualitySeal } from "@/content/partners";
+import { partners, awardBadge } from "@/content/partners";
 import { bookingUrl, bookingIsExternal, directBookingNote } from "@/content/booking";
 import { Icon } from "@/components/Icon/Icon";
 import { CookieSettingsLink } from "@/components/CookieConsent/CookieSettingsLink";
@@ -102,10 +102,10 @@ export function Footer(): React.ReactElement {
             ))}
           </ul>
           <Image
-            src={qualitySeal.src}
-            alt={qualitySeal.alt}
-            width={138}
-            height={160}
+            src={awardBadge.src}
+            alt={awardBadge.alt}
+            width={192}
+            height={192}
             className={styles.seal}
           />
         </div>
