@@ -1,0 +1,104 @@
+/* Vorschläge zu den Hauptbereichen */
+.linkGrid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .linkGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.linkCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
+}
+
+.linkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+  color: var(--color-forest);
+}
+
+.linkIcon :global(svg) {
+  width: 24px;
+  height: 24px;
+}
+
+.linkTitle {
+  font-size: var(--text-xl);
+}
+
+.linkText {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  flex: 1;
+}
+
+.linkBtn {
+  align-self: flex-start;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Abschluss: persönlicher Kontakt auf Waldgrün */
+.help {
+  text-align: center;
+}
+
+.helpEyebrow {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-sand);
+}
+
+.helpTitle {
+  margin-top: var(--space-3);
+  font-size: clamp(2rem, 1.3rem + 3vw, 3rem);
+  color: var(--color-cream);
+}
+
+.helpText {
+  margin: var(--space-5) auto 0;
+  max-width: 52ch;
+  color: rgba(245, 242, 234, 0.85);
+}
+
+.helpActions {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+/* Ghost-Button auf dunklem Waldgrün-Hintergrund braucht helle Kontrastfarben. */
+.helpGhost {
+  color: var(--color-cream) !important;
+  border-color: rgba(245, 242, 234, 0.4);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .helpGhost:hover {
+    background: var(--color-cream) !important;
+    color: var(--color-forest-800) !important;
+    border-color: var(--color-cream);
+  }
+}

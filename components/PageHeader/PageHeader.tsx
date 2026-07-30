@@ -7,6 +7,8 @@ interface PageHeaderProps {
   readonly eyebrow?: string;
   readonly title: string;
   readonly lead?: string;
+  /** Optionale Aktionen (Buttons) direkt unter dem Lead-Text. */
+  readonly actions?: React.ReactNode;
   /** Optionale Sub-Navigation (z. B. für den Hotel-Bereich). */
   readonly subnav?: readonly NavItem[];
   /** Aktueller Pfad zum Markieren des aktiven Subnav-Punktes. */
@@ -21,6 +23,7 @@ export function PageHeader({
   eyebrow,
   title,
   lead,
+  actions,
   subnav,
   activePath,
 }: PageHeaderProps): React.ReactElement {
@@ -30,6 +33,7 @@ export function PageHeader({
         {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
         <h1 className={styles.title}>{title}</h1>
         {lead ? <p className={styles.lead}>{lead}</p> : null}
+        {actions ? <div className={styles.actions}>{actions}</div> : null}
 
         {subnav ? (
           <nav className={styles.subnav} aria-label="Unterseiten">

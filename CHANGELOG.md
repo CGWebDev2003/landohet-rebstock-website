@@ -4,6 +4,31 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.5.0] – 2026-07-30
+
+### Added
+
+- **404-Seite** (`app/not-found.tsx`): Eigene „Seite nicht gefunden"-Ansicht im
+  Design der Website — Seitenkopf mit Eyebrow „Fehler 404", direkter CTA zurück
+  zur Startseite und zur Telefonnummer, Karten mit den fünf Hauptbereichen
+  (Hotel, Feiern, Region, Impressionen, Kontakt) sowie ein Waldgrün-Abschluss
+  mit Telefon- und E-Mail-Kontakt. Header und Footer bleiben erhalten, da die
+  Seite innerhalb des Root-Layouts gerendert wird.
+- **PageHeader**: Optionale Prop `actions` für Buttons direkt unter dem
+  Lead-Text.
+
+### Changed
+
+- **Kontaktseite**: Der Abschnitt „Anfahrt" zeigt die Wege mit Auto und mit
+  Bus & Bahn jetzt als zwei Icon-Kacheln (`IconTile`) statt in einem
+  zweispaltigen Layout neben dem Lageplan. Der Link zur Karten-App heißt
+  jetzt „Route in Karten-App öffnen".
+
+### Removed
+
+- **Kontaktseite**: Der Lageplan-Platzhalter im Abschnitt „Anfahrt" wurde
+  entfernt (inkl. des zugehörigen TODO für eine eingebettete Karte).
+
 ## [0.4.3] – 2026-07-25
 
 ### Fixed
