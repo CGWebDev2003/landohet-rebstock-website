@@ -131,7 +131,29 @@
 .partnerList {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-3);
+}
+
+/* Logo-Kachel: heller Grund, damit die Logos mit weißem Hintergrund auf dem
+   dunklen Waldgrün sauber stehen. */
+.partnerLogo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+/* Alle Logos laufen auf einheitlicher Höhe, die Breite ergibt sich aus dem
+   Seitenverhältnis. Die feste Höhe hält den Platz auch vor dem Laden frei —
+   mit `height: auto` fiele die Box auf 0 zusammen und das Lazy Loading würde
+   nicht auslösen. */
+.partnerImage {
+  height: var(--space-10);
+  width: auto;
+  object-fit: contain;
 }
 
 .partner {

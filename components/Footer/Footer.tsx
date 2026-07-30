@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { site, emailHref } from "@/content/site";
@@ -80,12 +81,24 @@ export function Footer(): React.ReactElement {
       <div className={styles.partners}>
         <p className={styles.partnersTitle}>Partner & Mitgliedschaften</p>
         <ul className={styles.partnerList}>
-          {partners.map((p) => (
-            <li key={p.name} className={styles.partner}>
-              {/* TODO: Sobald Logos vorliegen, Text-Badge durch next/image ersetzen. */}
-              {p.name}
-            </li>
-          ))}
+          {partners.map((p) =>
+            p.logo ? (
+              <li key={p.name} className={styles.partnerLogo}>
+                <Image
+                  src={p.logo.src}
+                  alt={p.name}
+                  width={p.logo.width}
+                  height={p.logo.height}
+                  className={styles.partnerImage}
+                />
+              </li>
+            ) : (
+              /* Ohne Logo bleibt der Name als Text-Badge stehen. */
+              <li key={p.name} className={styles.partner}>
+                {p.name}
+              </li>
+            ),
+          )}
         </ul>
       </div>
 

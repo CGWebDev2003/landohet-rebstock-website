@@ -16,6 +16,12 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
   Seite innerhalb des Root-Layouts gerendert wird.
 - **PageHeader**: Optionale Prop `actions` für Buttons direkt unter dem
   Lead-Text.
+- **Footer**: Die Partner-Logos aus `/public/partner` werden jetzt über
+  `next/image` als helle Kacheln ausgegeben (Renchtal Tourismus, Schwarzwald
+  Tourismus, Bett+Bike, Nationalpark Schwarzwald, booking.com). Alle Logos
+  laufen auf einheitlicher Höhe; „Wanderbares Deutschland" bleibt mangels
+  Logo als Text-Badge und steht dafür am Ende der Reihe. `Partner.logo` ist
+  dafür jetzt ein `PartnerLogo`-Objekt aus Pfad, Breite und Höhe.
 
 ### Changed
 
