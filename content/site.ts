@@ -14,10 +14,11 @@ export interface SiteInfo {
   readonly cityRegion: string;
   readonly phone: string;
   readonly phoneHref: string;
-  readonly fax: string;
   readonly email: string;
   readonly taxId: string;
   readonly geo: { readonly lat: number; readonly lng: number };
+  /** Google-Maps-Kurzlink auf den Eintrag des Hauses. */
+  readonly mapsUrl: string;
   readonly authority: {
     readonly name: string;
     readonly street: string;
@@ -36,10 +37,10 @@ export const site: SiteInfo = {
   cityRegion: "Bottenau",
   phone: "+49 7802 3047",
   phoneHref: "tel:+4978023047",
-  fax: "07802 3048",
   email: "info@landhotel-rebstock.de",
   taxId: "DE178338199",
   geo: { lat: 48.5289, lng: 8.045 },
+  mapsUrl: "https://maps.app.goo.gl/z6h7YJ51sr6CNSWY8",
   authority: {
     name: "Stadtverwaltung Oberkirch",
     street: "Eisenbahnstraße 1",

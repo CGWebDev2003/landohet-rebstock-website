@@ -60,17 +60,6 @@ export default function KontaktPage(): React.ReactElement {
                     </span>
                   </a>
                 </li>
-                <li>
-                  <div className={styles.contactRow}>
-                    <span className={styles.contactIcon}>
-                      <Icon name="clock" />
-                    </span>
-                    <span>
-                      <span className={styles.contactLabel}>Fax</span>
-                      <span className={styles.contactValue}>{site.fax}</span>
-                    </span>
-                  </div>
-                </li>
               </ul>
 
               <Button href={bookingUrl} external={bookingIsExternal} variant="primary" icon="arrowRight">
@@ -108,14 +97,7 @@ export default function KontaktPage(): React.ReactElement {
           />
         </IconTileGrid>
         <div className={styles.mapCta}>
-          <Button
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              `${site.name} ${site.street} ${site.zip} Oberkirch`,
-            )}`}
-            external
-            variant="ghost"
-            icon="mapPin"
-          >
+          <Button href={site.mapsUrl} external variant="ghost" icon="mapPin">
             Route in Karten-App öffnen
           </Button>
         </div>

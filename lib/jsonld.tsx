@@ -14,7 +14,6 @@ export function HotelJsonLd(): React.ReactElement {
       "Familiengeführtes Bed-&-Breakfast-Hotel zwischen Wein und Wald im Winzerdorf Bottenau am Fuß des Schwarzwalds.",
     url: site.url,
     telephone: site.phone,
-    faxNumber: site.fax,
     email: site.email,
     priceRange: "€€",
     petsAllowed: true,
@@ -34,6 +33,7 @@ export function HotelJsonLd(): React.ReactElement {
       latitude: site.geo.lat,
       longitude: site.geo.lng,
     },
+    hasMap: site.mapsUrl,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Kostenfreies WLAN", value: true },
       { "@type": "LocationFeatureSpecification", name: "Kostenfreie Parkplätze", value: true },

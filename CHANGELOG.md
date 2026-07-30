@@ -23,11 +23,18 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
   Bus & Bahn jetzt als zwei Icon-Kacheln (`IconTile`) statt in einem
   zweispaltigen Layout neben dem Lageplan. Der Link zur Karten-App heißt
   jetzt „Route in Karten-App öffnen".
+- **Stammdaten**: Neues Feld `site.mapsUrl` mit dem Google-Maps-Kurzlink des
+  Hauses. Der Anfahrts-Button verlinkt darauf statt auf eine aus der Adresse
+  zusammengesetzte Maps-Suche; die strukturierten Daten (`HotelJsonLd`)
+  geben den Link zusätzlich als `hasMap` aus.
 
 ### Removed
 
 - **Kontaktseite**: Der Lageplan-Platzhalter im Abschnitt „Anfahrt" wurde
   entfernt (inkl. des zugehörigen TODO für eine eingebettete Karte).
+- **Faxnummer**: `site.fax` und alle Ausgaben davon entfernt — die
+  Kontaktkarte auf der Kontaktseite, die Kontaktangaben im Impressum und
+  `faxNumber` in den strukturierten Daten.
 
 ## [0.4.3] – 2026-07-25
 

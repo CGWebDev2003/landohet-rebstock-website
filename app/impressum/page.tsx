@@ -31,8 +31,6 @@ export default function ImpressumPage(): React.ReactElement {
           <p>
             Telefon: <a href={site.phoneHref}>{site.phone}</a>
             <br />
-            Fax: {site.fax}
-            <br />
             E-Mail: <a href={emailHref}>{site.email}</a>
           </p>
 
