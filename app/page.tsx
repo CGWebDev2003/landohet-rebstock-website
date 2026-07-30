@@ -46,16 +46,14 @@ export default function Home(): React.ReactElement {
           />
           <div className={styles.heroScrim} aria-hidden="true" />
         </div>
-        <div className={styles.heroSeal}>
-          <Image
-            src={qualitySeal.src}
-            alt={qualitySeal.alt}
-            width={290}
-            height={336}
-            priority
-            className={styles.heroSealImage}
-          />
-        </div>
+        <Image
+          src={qualitySeal.src}
+          alt={qualitySeal.alt}
+          width={290}
+          height={336}
+          priority
+          className={styles.heroSeal}
+        />
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
             <h1 id="hero-title" className={styles.heroTitle}>

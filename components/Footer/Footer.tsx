@@ -101,15 +101,13 @@ export function Footer(): React.ReactElement {
               </li>
             ))}
           </ul>
-          <div className={styles.seal}>
-            <Image
-              src={qualitySeal.src}
-              alt={qualitySeal.alt}
-              width={138}
-              height={160}
-              className={styles.sealImage}
-            />
-          </div>
+          <Image
+            src={qualitySeal.src}
+            alt={qualitySeal.alt}
+            width={138}
+            height={160}
+            className={styles.seal}
+          />
         </div>
       </div>
 

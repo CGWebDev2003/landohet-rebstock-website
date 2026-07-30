@@ -145,16 +145,9 @@
   gap: var(--space-3);
 }
 
+/* Ohne Kachel, nur das Bild — bewusst größer als die Partner-Logos. */
 .seal {
   margin-left: auto;
-  display: inline-flex;
-  padding: var(--space-3);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
-}
-
-/* Bewusst größer als die Partner-Logos. */
-.sealImage {
   display: block;
   height: var(--space-20);
   width: auto;

@@ -72,21 +72,11 @@
   gap: var(--space-3);
 }
 
-/* Qualitätssiegel unten rechts im Hero — heller Grund, damit die Schrift auf
-   dem Foto in jeder Bildsituation lesbar bleibt. */
+/* Qualitätssiegel unten rechts im Hero — ohne Kachel, nur das Bild. */
 .heroSeal {
   position: absolute;
   right: var(--space-5);
   bottom: var(--space-6);
-  padding: var(--space-2);
-  border-radius: var(--radius-md);
-  background: color-mix(in srgb, var(--color-surface) 90%, transparent);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: var(--shadow-lg);
-}
-
-.heroSealImage {
   display: block;
   height: var(--hero-seal-h);
   width: auto;
