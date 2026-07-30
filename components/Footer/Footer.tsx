@@ -104,8 +104,8 @@ export function Footer(): React.ReactElement {
           <Image
             src={awardBadge.src}
             alt={awardBadge.alt}
-            width={192}
-            height={192}
+            width={256}
+            height={256}
             className={styles.seal}
           />
         </div>
