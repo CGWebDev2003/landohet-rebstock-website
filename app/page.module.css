@@ -1,13 +1,17 @@
 /* ===== Hero ===== */
 .hero {
+  /* Höhe des Qualitätssiegels — unten als Freiraum reserviert, damit das
+     Siegel auf schmalen Screens nicht über der Hero-Card liegt. */
+  --hero-seal-h: clamp(112px, 16vw, 200px);
   position: relative;
   isolation: isolate;
   overflow: hidden;
   display: flex;
   align-items: center;
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   padding-top: var(--header-h);
+  padding-bottom: calc(var(--hero-seal-h) + var(--space-16));
 }
 
 .heroMedia {
@@ -68,10 +72,28 @@
   gap: var(--space-3);
 }
 
+/* Qualitätssiegel unten rechts im Hero — ohne Kachel, nur das Bild. */
+.heroSeal {
+  position: absolute;
+  right: var(--space-5);
+  bottom: var(--space-6);
+  display: block;
+  height: var(--hero-seal-h);
+  width: auto;
+}
 
 @media (min-width: 860px) {
+  /* Ab hier steht die Hero-Card links, das Siegel rechts daneben — der
+     reservierte Freiraum unten wird nicht mehr gebraucht. */
+  .hero {
+    padding-bottom: var(--space-10);
+  }
   .heroContent {
     padding: var(--space-6);
+  }
+  .heroSeal {
+    right: var(--space-8);
+    bottom: var(--space-8);
   }
 }
 

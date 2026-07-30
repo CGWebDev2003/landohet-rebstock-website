@@ -1,18 +1,60 @@
-export interface Partner {
-  readonly name: string;
+export interface PartnerLogo {
+  /** Pfad zur Datei unter /public/partner. */
+  readonly src: string;
   /**
-   * TODO: Echte Partner-Logos (SVG) unter /public/partners ablegen und hier
-   * verlinken. Bis dahin wird der Name als Text-Badge dargestellt.
+   * Maße für next/image: das Seitenverhältnis der Originaldatei, skaliert auf
+   * die doppelte Darstellungsgröße im Footer. Die endgültige Größe begrenzt
+   * das CSS des Footers.
    */
-  readonly logo: string | null;
-  readonly href: string | null;
+  readonly width: number;
+  readonly height: number;
 }
 
+export interface Partner {
+  readonly name: string;
+  readonly logo: PartnerLogo;
+  /** Ziel des Logos — wird im Footer in einem neuen Tab geöffnet. */
+  readonly href: string;
+}
+
+/**
+ * Auszeichnung, die prominenter gezeigt wird als die Partner-Logos: im Hero
+ * unten rechts und im Footer rechts neben der Partner-Reihe.
+ *
+ * Achtung: Der Dateiname stammt noch vom Qualitätssiegel „Wanderbares
+ * Deutschland", die Datei enthält aber den Booking.com Traveller Review Award
+ * 2024. Alt-Text und Maße richten sich nach dem tatsächlichen Inhalt —
+ * quadratisch, 1080 × 1080 px.
+ */
+export const awardBadge = {
+  src: "/qualitaetssiegel-wanderbares-deutschland-2-663x767-553x640.png",
+  alt: "Booking.com Traveller Review Award 2024 für das Landhotel Rebstock — 8,9 von 10 Punkten",
+} as const;
+
 export const partners: readonly Partner[] = [
-  { name: "Renchtal Tourismus", logo: null, href: null },
-  { name: "Schwarzwald Tourismus", logo: null, href: null },
-  { name: "Wanderbares Deutschland", logo: null, href: null },
-  { name: "Bett+Bike", logo: null, href: null },
-  { name: "Nationalpark Schwarzwald", logo: null, href: null },
-  { name: "booking.com", logo: null, href: null },
+  {
+    name: "Renchtal Tourismus",
+    logo: { src: "/partner/logo-renchtal.png", width: 132, height: 80 },
+    href: "https://www.renchtal-tourismus.de/",
+  },
+  {
+    name: "Schwarzwald Tourismus",
+    logo: { src: "/partner/stg-logo_front_large.png", width: 80, height: 80 },
+    href: "https://www.schwarzwald-tourismus.info/",
+  },
+  {
+    name: "Bett+Bike",
+    logo: { src: "/partner/bett-bike.png", width: 64, height: 80 },
+    href: "https://www.bettundbike.de/",
+  },
+  {
+    name: "Nationalpark Schwarzwald",
+    logo: { src: "/partner/logo-nationalpark.png", width: 160, height: 80 },
+    href: "https://www.nationalpark-schwarzwald.de/",
+  },
+  {
+    name: "booking.com",
+    logo: { src: "/partner/logobooking-com.jpg", width: 166, height: 48 },
+    href: "https://www.booking.com/hotel/de/landhotel-rebstock-oberkirch.de.html",
+  },
 ];

@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { site, emailHref } from "@/content/site";
 import { mainNav, hotelNav, legalNav } from "@/content/nav";
-import { partners } from "@/content/partners";
+import { partners, awardBadge } from "@/content/partners";
 import { bookingUrl, bookingIsExternal, directBookingNote } from "@/content/booking";
 import { Icon } from "@/components/Icon/Icon";
 import { CookieSettingsLink } from "@/components/CookieConsent/CookieSettingsLink";
@@ -79,14 +80,35 @@ export function Footer(): React.ReactElement {
       {/* Partner-Logos */}
       <div className={styles.partners}>
         <p className={styles.partnersTitle}>Partner & Mitgliedschaften</p>
-        <ul className={styles.partnerList}>
-          {partners.map((p) => (
-            <li key={p.name} className={styles.partner}>
-              {/* TODO: Sobald Logos vorliegen, Text-Badge durch next/image ersetzen. */}
-              {p.name}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.partnerRow}>
+          <ul className={styles.partnerList}>
+            {partners.map((p) => (
+              <li key={p.name}>
+                <a
+                  href={p.href}
+                  className={styles.partnerLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={p.logo.src}
+                    alt={p.name}
+                    width={p.logo.width}
+                    height={p.logo.height}
+                    className={styles.partnerImage}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <Image
+            src={awardBadge.src}
+            alt={awardBadge.alt}
+            width={256}
+            height={256}
+            className={styles.seal}
+          />
+        </div>
       </div>
 
       <div className={styles.bottom}>

@@ -128,22 +128,62 @@
   margin-bottom: var(--space-5);
 }
 
+/* Partner-Logos links, Qualitätssiegel rechtsbündig daneben. Bricht die Zeile
+   um, rückt das Siegel über `margin-left: auto` weiterhin nach rechts. */
+.partnerRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
 .partnerList {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-3);
 }
 
-.partner {
+/* Ohne Kachel, nur das Bild — bewusst größer als die Partner-Logos. */
+.seal {
+  margin-left: auto;
+  display: block;
+  height: var(--space-32);
+  width: auto;
+}
+
+/* Logo-Kachel: heller Grund, damit die Logos mit weißem Hintergrund auf dem
+   dunklen Waldgrün sauber stehen. */
+.partnerLink {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
-  padding: 0 var(--space-5);
-  border: 1px solid rgba(245, 242, 234, 0.24);
-  border-radius: var(--radius-pill);
-  font-size: var(--text-sm);
-  color: rgba(245, 242, 234, 0.85);
-  background: rgba(245, 242, 234, 0.04);
+  justify-content: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  transition: transform 0.22s var(--ease), box-shadow 0.22s var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .partnerLink:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.partnerLink:active {
+  transform: translateY(0);
+}
+
+/* Alle Logos laufen auf einheitlicher Höhe, die Breite ergibt sich aus dem
+   Seitenverhältnis. Die feste Höhe hält den Platz auch vor dem Laden frei —
+   mit `height: auto` fiele die Box auf 0 zusammen und das Lazy Loading würde
+   nicht auslösen. */
+.partnerImage {
+  height: var(--space-10);
+  width: auto;
+  object-fit: contain;
 }
 
 /* --- Bottom ------------------------------------------------------------- */

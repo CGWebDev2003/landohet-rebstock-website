@@ -86,32 +86,9 @@
 }
 
 /* Anfahrt */
-.mapLayout {
-  display: grid;
-  gap: var(--space-8);
-  grid-template-columns: 1fr;
-  align-items: center;
-}
-
-@media (min-width: 860px) {
-  .mapLayout {
-    grid-template-columns: 1.4fr 1fr;
-    gap: var(--space-12);
-  }
-}
-
-.mapInfo {
+.mapCta {
+  margin-top: var(--space-8);
   display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-.directions p {
-  color: var(--color-muted);
-  font-size: var(--text-sm);
-  margin-top: var(--space-2);
-}
-
-.directionsTitle {
-  font-size: var(--text-lg);
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }

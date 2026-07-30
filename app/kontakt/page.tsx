@@ -4,8 +4,8 @@ import { PageHeader } from "@/components/PageHeader/PageHeader";
 import { Section, SectionHeader } from "@/components/Section/Section";
 import { Card } from "@/components/Card/Card";
 import { Button } from "@/components/Button/Button";
-import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { IconTile, IconTileGrid } from "@/components/IconTile/IconTile";
 import { Icon } from "@/components/Icon/Icon";
 import { site, emailHref } from "@/content/site";
 import { bookingUrl, bookingIsExternal, directBookingNote } from "@/content/booking";
@@ -60,17 +60,6 @@ export default function KontaktPage(): React.ReactElement {
                     </span>
                   </a>
                 </li>
-                <li>
-                  <div className={styles.contactRow}>
-                    <span className={styles.contactIcon}>
-                      <Icon name="clock" />
-                    </span>
-                    <span>
-                      <span className={styles.contactLabel}>Fax</span>
-                      <span className={styles.contactValue}>{site.fax}</span>
-                    </span>
-                  </div>
-                </li>
               </ul>
 
               <Button href={bookingUrl} external={bookingIsExternal} variant="primary" icon="arrowRight">
@@ -95,42 +84,22 @@ export default function KontaktPage(): React.ReactElement {
           title="So finden Sie zu uns"
           text="Ruhig gelegen im Winzerdorf Bottenau, abseits vom Durchgangsverkehr — zwischen Rheinebene und den Rebhängen am Fuß des Schwarzwalds."
         />
-        <div className={styles.mapLayout}>
-          <div className={styles.mapMedia}>
-            {/* TODO: Statische Karte / eingebettete Karte einsetzen (z. B. OpenStreetMap-Statik oder Karten-Provider mit Consent). */}
-            <Placeholder
-              label={`Lageplan: ${site.street}, ${site.zip} ${site.city}`}
-              ratio="16/10"
-              rounded="lg"
-            />
-          </div>
-          <div className={styles.mapInfo}>
-            <div className={styles.directions}>
-              <h3 className={styles.directionsTitle}>Mit dem Auto</h3>
-              <p>
-                Über die A5 (Ausfahrt Appenweier/Oberkirch) ins Renchtal, weiter nach
-                Bottenau. Kostenfreie Parkplätze und eine E-Auto-Ladestation finden Sie
-                direkt am Haus.
-              </p>
-            </div>
-            <div className={styles.directions}>
-              <h3 className={styles.directionsTitle}>Mit Bus & Bahn</h3>
-              <p>
-                Bahnhof Oberkirch, von dort weiter mit dem Bus nach Bottenau. Mit der
-                KONUS-Gästekarte nutzen Sie Bus und Bahn im Schwarzwald kostenlos.
-              </p>
-            </div>
-            <Button
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                `${site.name} ${site.street} ${site.zip} Oberkirch`,
-              )}`}
-              external
-              variant="ghost"
-              icon="mapPin"
-            >
-              In Karten öffnen
-            </Button>
-          </div>
+        <IconTileGrid columns={2}>
+          <IconTile
+            icon="car"
+            title="Mit dem Auto"
+            text="Über die A5 (Ausfahrt Appenweier/Oberkirch) ins Renchtal, weiter nach Bottenau. Kostenfreie Parkplätze und eine E-Auto-Ladestation finden Sie direkt am Haus."
+          />
+          <IconTile
+            icon="bus"
+            title="Mit Bus & Bahn"
+            text="Bahnhof Oberkirch, von dort weiter mit dem Bus nach Bottenau. Mit der KONUS-Gästekarte nutzen Sie Bus und Bahn im Schwarzwald kostenlos."
+          />
+        </IconTileGrid>
+        <div className={styles.mapCta}>
+          <Button href={site.mapsUrl} external variant="ghost" icon="mapPin">
+            Route in Karten-App öffnen
+          </Button>
         </div>
       </Section>
     </>

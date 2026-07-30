@@ -4,6 +4,52 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.5.0] – 2026-07-30
+
+### Added
+
+- **404-Seite** (`app/not-found.tsx`): Eigene „Seite nicht gefunden"-Ansicht im
+  Design der Website — Seitenkopf mit Eyebrow „Fehler 404", direkter CTA zurück
+  zur Startseite und zur Telefonnummer, Karten mit den fünf Hauptbereichen
+  (Hotel, Feiern, Region, Impressionen, Kontakt) sowie ein Waldgrün-Abschluss
+  mit Telefon- und E-Mail-Kontakt. Header und Footer bleiben erhalten, da die
+  Seite innerhalb des Root-Layouts gerendert wird.
+- **PageHeader**: Optionale Prop `actions` für Buttons direkt unter dem
+  Lead-Text.
+- **Qualitätssiegel „Wanderbares Deutschland"**: neu im Hero unten rechts
+  und im Footer rechtsbündig neben der Partner-Reihe, dort mit doppelter
+  Logo-Höhe. Beide Male steht das Bild frei, ohne Kachel dahinter. Der Hero
+  reserviert auf schmalen Screens Platz für das Siegel, damit es nicht über
+  der Hero-Card liegt.
+- **Footer**: Die Partner-Logos aus `/public/partner` werden jetzt über
+  `next/image` als helle Kacheln ausgegeben (Renchtal Tourismus, Schwarzwald
+  Tourismus, Bett+Bike, Nationalpark Schwarzwald, booking.com). Alle Logos
+  laufen auf einheitlicher Höhe und verlinken in einem neuen Tab auf die
+  jeweilige Partnerseite, inklusive Hover- und Active-State. `Partner.logo`
+  ist dafür ein `PartnerLogo`-Objekt aus Pfad, Breite und Höhe; `logo` und
+  `href` sind jetzt Pflichtfelder.
+
+### Changed
+
+- **Kontaktseite**: Der Abschnitt „Anfahrt" zeigt die Wege mit Auto und mit
+  Bus & Bahn jetzt als zwei Icon-Kacheln (`IconTile`) statt in einem
+  zweispaltigen Layout neben dem Lageplan. Der Link zur Karten-App heißt
+  jetzt „Route in Karten-App öffnen".
+- **Stammdaten**: Neues Feld `site.mapsUrl` mit dem Google-Maps-Kurzlink des
+  Hauses. Der Anfahrts-Button verlinkt darauf statt auf eine aus der Adresse
+  zusammengesetzte Maps-Suche; die strukturierten Daten (`HotelJsonLd`)
+  geben den Link zusätzlich als `hasMap` aus.
+
+### Removed
+
+- **Kontaktseite**: Der Lageplan-Platzhalter im Abschnitt „Anfahrt" wurde
+  entfernt (inkl. des zugehörigen TODO für eine eingebettete Karte).
+- **Footer**: „Wanderbares Deutschland" aus den Partnern entfernt. Damit
+  entfällt auch der Text-Badge-Fallback für Partner ohne Logo.
+- **Faxnummer**: `site.fax` und alle Ausgaben davon entfernt — die
+  Kontaktkarte auf der Kontaktseite, die Kontaktangaben im Impressum und
+  `faxNumber` in den strukturierten Daten.
+
 ## [0.4.3] – 2026-07-25
 
 ### Fixed
