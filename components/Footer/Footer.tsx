@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 import { site, emailHref } from "@/content/site";
 import { mainNav, hotelNav, legalNav } from "@/content/nav";
-import { partners } from "@/content/partners";
+import { partners, qualitySeal } from "@/content/partners";
 import { bookingUrl, bookingIsExternal, directBookingNote } from "@/content/booking";
 import { Icon } from "@/components/Icon/Icon";
 import { CookieSettingsLink } from "@/components/CookieConsent/CookieSettingsLink";
@@ -80,26 +80,37 @@ export function Footer(): React.ReactElement {
       {/* Partner-Logos */}
       <div className={styles.partners}>
         <p className={styles.partnersTitle}>Partner & Mitgliedschaften</p>
-        <ul className={styles.partnerList}>
-          {partners.map((p) => (
-            <li key={p.name}>
-              <a
-                href={p.href}
-                className={styles.partnerLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={p.logo.src}
-                  alt={p.name}
-                  width={p.logo.width}
-                  height={p.logo.height}
-                  className={styles.partnerImage}
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.partnerRow}>
+          <ul className={styles.partnerList}>
+            {partners.map((p) => (
+              <li key={p.name}>
+                <a
+                  href={p.href}
+                  className={styles.partnerLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={p.logo.src}
+                    alt={p.name}
+                    width={p.logo.width}
+                    height={p.logo.height}
+                    className={styles.partnerImage}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className={styles.seal}>
+            <Image
+              src={qualitySeal.src}
+              alt={qualitySeal.alt}
+              width={138}
+              height={160}
+              className={styles.sealImage}
+            />
+          </div>
+        </div>
       </div>
 
       <div className={styles.bottom}>

@@ -17,6 +17,17 @@ export interface Partner {
   readonly href: string;
 }
 
+/**
+ * Qualitätssiegel „Wanderbares Deutschland" — wird prominenter gezeigt als die
+ * Partner-Logos (Hero unten rechts, Footer rechts neben der Partner-Reihe).
+ * Die Originaldatei ist 553 × 640 px; die Maße an den Einsatzorten halten
+ * dieses Seitenverhältnis.
+ */
+export const qualitySeal = {
+  src: "/qualitaetssiegel-wanderbares-deutschland-2-663x767-553x640.png",
+  alt: "Qualitätssiegel Wanderbares Deutschland",
+} as const;
+
 export const partners: readonly Partner[] = [
   {
     name: "Renchtal Tourismus",

@@ -128,11 +128,36 @@
   margin-bottom: var(--space-5);
 }
 
+/* Partner-Logos links, Qualitätssiegel rechtsbündig daneben. Bricht die Zeile
+   um, rückt das Siegel über `margin-left: auto` weiterhin nach rechts. */
+.partnerRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
 .partnerList {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-3);
+}
+
+.seal {
+  margin-left: auto;
+  display: inline-flex;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+/* Bewusst größer als die Partner-Logos. */
+.sealImage {
+  display: block;
+  height: var(--space-20);
+  width: auto;
 }
 
 /* Logo-Kachel: heller Grund, damit die Logos mit weißem Hintergrund auf dem

@@ -16,6 +16,11 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
   Seite innerhalb des Root-Layouts gerendert wird.
 - **PageHeader**: Optionale Prop `actions` für Buttons direkt unter dem
   Lead-Text.
+- **Qualitätssiegel „Wanderbares Deutschland"**: neu im Hero (unten rechts,
+  auf hellem Grund mit Blur, damit die Schrift auf dem Foto lesbar bleibt)
+  und im Footer rechtsbündig neben der Partner-Reihe, dort mit doppelter
+  Logo-Höhe. Der Hero reserviert auf schmalen Screens Platz für das Siegel,
+  damit es nicht über der Hero-Card liegt.
 - **Footer**: Die Partner-Logos aus `/public/partner` werden jetzt über
   `next/image` als helle Kacheln ausgegeben (Renchtal Tourismus, Schwarzwald
   Tourismus, Bett+Bike, Nationalpark Schwarzwald, booking.com). Alle Logos

@@ -15,6 +15,7 @@ import { bookingUrl, bookingIsExternal, directBookingNote, phoneHref } from "@/c
 import { homeHighlights, includedServices } from "@/content/hotel";
 import { rooms } from "@/content/rooms";
 import { activities } from "@/content/region";
+import { qualitySeal } from "@/content/partners";
 
 export const metadata: Metadata = {
   title: "Bed & Breakfast zwischen Wein und Wald",
@@ -44,6 +45,16 @@ export default function Home(): React.ReactElement {
             className={styles.heroImage}
           />
           <div className={styles.heroScrim} aria-hidden="true" />
+        </div>
+        <div className={styles.heroSeal}>
+          <Image
+            src={qualitySeal.src}
+            alt={qualitySeal.alt}
+            width={290}
+            height={336}
+            priority
+            className={styles.heroSealImage}
+          />
         </div>
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
