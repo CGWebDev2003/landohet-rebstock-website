@@ -72,6 +72,12 @@
   gap: var(--space-3);
 }
 
+.heroCtaNote {
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
 /* Qualitätssiegel unten rechts im Hero — ohne Kachel, nur das Bild. */
 .heroSeal {
   position: absolute;

@@ -10,8 +10,14 @@ import { Marquee } from "@/components/Marquee/Marquee";
 import { IconTile, IconTileGrid } from "@/components/IconTile/IconTile";
 import { Icon } from "@/components/Icon/Icon";
 import { HotelJsonLd } from "@/lib/jsonld";
-import { site } from "@/content/site";
-import { bookingUrl, bookingIsExternal, directBookingNote, phoneHref } from "@/content/booking";
+import { site, roomCountWordCap } from "@/content/site";
+import {
+  bookingUrl,
+  bookingIsExternal,
+  directBookingNote,
+  directBookingShort,
+  phoneHref,
+} from "@/content/booking";
 import { homeHighlights, includedServices } from "@/content/hotel";
 import { rooms } from "@/content/rooms";
 import { activities } from "@/content/region";
@@ -57,7 +63,7 @@ export default function Home(): React.ReactElement {
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
             <h1 id="hero-title" className={styles.heroTitle}>
-              Ankommen, wo Wein und Wald sich begegnen.
+              {roomCountWordCap} Zimmer mit Balkon in Bottenau.
             </h1>
             <p className={styles.heroLead}>
               Ein familiengeführtes Bed-&-Breakfast im ruhigen Winzerdorf Bottenau —
@@ -72,6 +78,7 @@ export default function Home(): React.ReactElement {
                 {site.phone}
               </Button>
             </div>
+            <p className={styles.heroCtaNote}>{directBookingNote}</p>
           </div>
         </div>
       </section>
@@ -80,8 +87,8 @@ export default function Home(): React.ReactElement {
       <Section>
         <SectionHeader
           eyebrow="Willkommen"
-          title="Ein kleines Haus mit großem Blick"
-          text="Zwölf Zimmer, viel Ruhe und die Herzlichkeit einer Familie, die ihr Haus selbst führt. Der Rebstock liegt dort, wo die Rheinebene in die Rebhänge des Schwarzwalds übergeht."
+          title={`${roomCountWordCap} Zimmer, familiengeführt, ruhig gelegen.`}
+          text={`${roomCountWordCap} Zimmer, viel Ruhe und die Herzlichkeit einer Familie, die ihr Haus selbst führt. Der Rebstock liegt dort, wo die Rheinebene in die Rebhänge des Schwarzwalds übergeht.`}
         />
         <IconTileGrid columns={3}>
           {homeHighlights.map((h) => (
@@ -135,12 +142,11 @@ export default function Home(): React.ReactElement {
       {/* ===== Marquee-Brücke ===== */}
       <Marquee
         items={[
-          "Ruhe",
-          "Aussicht",
+          "Familiengeführt",
+          `${roomCountWordCap} Zimmer mit Balkon`,
+          "Kein Restaurantbetrieb",
+          "Ruhige Lage in Bottenau",
           "Regionales Frühstück",
-          "Wein & Wald",
-          "Familiär geführt",
-          "Balkon mit Talblick",
         ]}
       />
 
@@ -148,7 +154,7 @@ export default function Home(): React.ReactElement {
       <Section>
         <SectionHeader
           eyebrow="Zimmer"
-          title="Zwölf Zimmer, alle mit Balkon und Aussicht"
+          title={`${roomCountWordCap} Zimmer, alle mit Balkon und Aussicht`}
           text="Jedes Zimmer verfügt über Dusche/WC, Balkon, TV, Telefon, Föhn, Kühlschrank, Tresor und Radiowecker — bequem per Lift erreichbar."
         />
         <div className={styles.roomsGrid}>
@@ -184,7 +190,8 @@ export default function Home(): React.ReactElement {
                   <span className={styles.roomPersons}>{room.persons}</span>
                 </div>
                 <p className={styles.roomPrice}>
-                  <strong>{room.priceFrom}</strong> {room.priceUnit}
+                  <strong>{room.priceFrom}</strong> {room.priceUnit},{" "}
+                  {directBookingShort}
                 </p>
               </div>
             </Card>

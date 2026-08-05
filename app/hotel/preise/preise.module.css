@@ -1,3 +1,25 @@
+.directBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-forest-100);
+}
+
+.directBannerIcon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  color: var(--color-forest);
+}
+
+.directBannerText {
+  color: var(--color-forest-800);
+  font-weight: 600;
+}
+
 .tableWrap {
   overflow-x: auto;
   border-radius: var(--radius-lg);

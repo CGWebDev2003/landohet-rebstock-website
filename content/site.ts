@@ -49,3 +49,11 @@ export const site: SiteInfo = {
 };
 
 export const emailHref = `mailto:${site.email}`;
+
+/**
+ * Anzahl der Zimmer — zentrale Stelle, damit die Zahl bei Bedarf an einem
+ * einzigen Ort korrigiert werden kann. Aktuell bestätigt: 12.
+ */
+export const roomCount = 12;
+export const roomCountWord = "zwölf";
+export const roomCountWordCap = "Zwölf";

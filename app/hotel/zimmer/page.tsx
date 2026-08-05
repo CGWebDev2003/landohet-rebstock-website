@@ -9,7 +9,8 @@ import { CheckList } from "@/components/CheckList/CheckList";
 import { Icon } from "@/components/Icon/Icon";
 import { hotelNav } from "@/content/nav";
 import { rooms } from "@/content/rooms";
-import { bookingUrl, bookingIsExternal } from "@/content/booking";
+import { bookingUrl, bookingIsExternal, directBookingShort } from "@/content/booking";
+import { roomCountWordCap } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Zimmer",
@@ -23,7 +24,7 @@ export default function ZimmerPage(): React.ReactElement {
       <PageHeader
         eyebrow="Hotel"
         title="Unsere Zimmer"
-        lead="Zwölf Zimmer, alle mit Dusche/WC, TV, Telefon, Föhn, Kühlschrank, Tresor und Radiowecker — bequem per Lift erreichbar. Vom gemütlichen Doppelzimmer bis zum XL-Familienzimmer für sechs Personen."
+        lead={`${roomCountWordCap} Zimmer, alle mit Dusche/WC, TV, Telefon, Föhn, Kühlschrank, Tresor und Radiowecker — bequem per Lift erreichbar. Vom gemütlichen Doppelzimmer bis zum XL-Familienzimmer für sechs Personen.`}
         subnav={hotelNav}
         activePath="/hotel/zimmer"
       />
@@ -55,7 +56,8 @@ export default function ZimmerPage(): React.ReactElement {
               </div>
               <h2 className={styles.name}>{room.name}</h2>
               <p className={styles.price}>
-                <strong>{room.priceFrom}</strong> {room.priceUnit}
+                <strong>{room.priceFrom}</strong> {room.priceUnit},{" "}
+                {directBookingShort}
               </p>
               <p className={styles.desc}>{room.description}</p>
               <CheckList items={room.details} />
