@@ -48,7 +48,7 @@ export default function HotelPage(): React.ReactElement {
           media={
             <div className={styles.welcomeMedia}>
               <Image
-                src="/region/weinberge.jpeg"
+                src="/region/hotel.jpeg"
                 alt="Blick vom Balkon eines Zimmers ins Renchtal und in den Schwarzwald"
                 fill
                 sizes="(min-width: 860px) 45vw, 100vw"
