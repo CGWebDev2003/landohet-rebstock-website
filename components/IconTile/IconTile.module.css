@@ -63,20 +63,13 @@
 
 /* --- Grün hervorgehobener Fokuspunkt ----------------------------------- */
 .highlight {
-  background: var(--color-forest);
-  border-color: var(--color-forest);
-  color: var(--color-cream);
+  background: var(--color-sand);
+  border-color: var(--color-sand);
+  color: var(--color-forest-800);
 }
-
-.highlight .title {
-  color: var(--color-cream);
-}
-
-.highlight .text {
-  color: rgba(245, 242, 234, 0.82);
-}
-
+.highlight .title { color: var(--color-forest-800); }
+.highlight .text { color: var(--color-forest-700); }
 .highlight .iconWrap {
-  background: rgba(245, 242, 234, 0.14);
-  color: var(--color-sand);
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--color-forest-800);
 }
