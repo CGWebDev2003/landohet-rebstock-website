@@ -17,8 +17,13 @@ export const bookingUrl: string =
     "Buchungsanfrage Landhotel Rebstock",
   )}`;
 
+/** Rabatt für Direktbuchungen — zentral, damit er sich an einer Stelle ändern lässt. */
+export const directBookingDiscountPercent = 3;
+
 /** Hinweis, der die Direktbuchung bewirbt. */
-export const directBookingNote =
-  "Direkt gebucht 3 % günstiger — ohne Umweg über Buchungsportale.";
+export const directBookingNote = `Direkt gebucht ${directBookingDiscountPercent} % günstiger — ohne Umweg über Buchungsportale.`;
+
+/** Kurzform für Preiszeilen, z. B. in Zimmerkarten. */
+export const directBookingShort = `direkt gebucht ${directBookingDiscountPercent} % günstiger`;
 
 export const phoneHref = site.phoneHref;

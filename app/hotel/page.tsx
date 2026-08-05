@@ -11,15 +11,20 @@ import { IconTile, IconTileGrid } from "@/components/IconTile/IconTile";
 import { Icon } from "@/components/Icon/Icon";
 import { hotelNav } from "@/content/nav";
 import { roomAmenities, includedServices } from "@/content/hotel";
+import { roomCount, roomCountWord, roomCountWordCap } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Das Hotel",
-  description:
-    "Zwölf Zimmer mit Balkon und Talblick, regionales Frühstück und ruhige Lage: Alles Wissenswerte zum Landhotel Rebstock in Bottenau auf einen Blick.",
+  description: `${roomCountWordCap} Zimmer mit Balkon und Talblick, regionales Frühstück und ruhige Lage: Alles Wissenswerte zum Landhotel Rebstock in Bottenau auf einen Blick.`,
 };
 
 const overviewLinks = [
-  { href: "/hotel/zimmer", icon: "key", title: "Zimmer", text: "12 Zimmer mit Balkon, alle per Lift erreichbar." },
+  {
+    href: "/hotel/zimmer",
+    icon: "key",
+    title: "Zimmer",
+    text: `${roomCount} Zimmer mit Balkon, alle per Lift erreichbar.`,
+  },
   { href: "/hotel/preise", icon: "wallet", title: "Preise", text: "Übernachtung inkl. Frühstücksbuffet und MwSt." },
   { href: "/hotel/fruehstueck", icon: "breakfast", title: "Frühstück", text: "Buffet mit regionalen Produkten und Terrassenblick." },
   { href: "/hotel/arrangements", icon: "calendar", title: "Arrangements", text: "Sparwoche & individuelle Familienangebote." },
@@ -33,7 +38,7 @@ export default function HotelPage(): React.ReactElement {
       <PageHeader
         eyebrow="Das Hotel"
         title="Ihr Zuhause zwischen Reben und Wald"
-        lead="Der Rebstock ist ein familiengeführtes Bed-&-Breakfast-Hotel mit zwölf Zimmern — ruhig gelegen im Winzerdorf Bottenau, abseits vom Durchgangsverkehr und doch mitten in der Ortenau."
+        lead={`Der Rebstock ist ein familiengeführtes Bed-&-Breakfast-Hotel mit ${roomCountWord} Zimmern — ruhig gelegen im Winzerdorf Bottenau, abseits vom Durchgangsverkehr und doch mitten in der Ortenau.`}
         subnav={hotelNav}
         activePath="/hotel"
       />
@@ -82,7 +87,7 @@ export default function HotelPage(): React.ReactElement {
         <SectionHeader
           eyebrow="Ausstattung"
           title="Alle Zimmer, alle gleich gut ausgestattet"
-          text="Unabhängig von der Kategorie gehört diese Ausstattung bei jedem unserer zwölf Zimmer dazu."
+          text={`Unabhängig von der Kategorie gehört diese Ausstattung bei jedem unserer ${roomCountWord} Zimmer dazu.`}
         />
         <CheckList items={roomAmenities.map((a) => a.label)} columns={2} />
       </Section>

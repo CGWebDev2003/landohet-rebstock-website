@@ -8,7 +8,7 @@ export interface Feature {
   readonly highlight?: boolean;
 }
 
-/** Zimmerausstattung — gilt für alle 12 Zimmer. */
+/** Zimmerausstattung — gilt für alle Zimmer (Anzahl: {@link roomCount} in content/site.ts). */
 export const roomAmenities: readonly { icon: IconName; label: string }[] = [
   { icon: "balcony", label: "Balkon mit Talblick" },
   { icon: "tv", label: "Dusche/WC & TV" },

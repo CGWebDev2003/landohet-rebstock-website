@@ -111,9 +111,17 @@
   }
 }
 
-.book {
+.bookWrap {
   display: none;
+  flex-direction: column;
   align-items: center;
+  gap: var(--space-1);
+}
+
+.book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 44px;
   padding: 0 var(--space-6);
   border-radius: var(--radius-pill);
@@ -128,6 +136,13 @@
   .book:hover {
     background: var(--color-sand-600);
   }
+}
+
+.bookNote {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  text-align: center;
+  max-width: 22ch;
 }
 
 /* --- Burger ------------------------------------------------------------- */
@@ -252,9 +267,11 @@
   .desktopNav {
     display: flex;
   }
-  .phone,
-  .book {
+  .phone {
     display: inline-flex;
+  }
+  .bookWrap {
+    display: flex;
   }
   .burger,
   .mobilePanel {

@@ -73,15 +73,18 @@ export function Header(): React.ReactElement {
             <Icon name="phone" className={styles.phoneIcon} />
             <span className={styles.phoneText}>{site.phone}</span>
           </a>
-          <a
-            href={bookingUrl}
-            className={styles.book}
-            {...(bookingIsExternal
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
-          >
-            Direkt buchen
-          </a>
+          <div className={styles.bookWrap}>
+            <a
+              href={bookingUrl}
+              className={styles.book}
+              {...(bookingIsExternal
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+            >
+              Direkt buchen
+            </a>
+            <span className={styles.bookNote}>{directBookingNote}</span>
+          </div>
           <button
             type="button"
             className={styles.burger}

@@ -4,6 +4,34 @@ Alle nennenswerten Änderungen an diesem Projekt werden hier dokumentiert.
 Das Format orientiert sich an [Keep a Changelog](https://keepachangelog.com/de/),
 die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.6.0] – 2026-08-05
+
+### Added
+
+- **noindex für den Pre-Sales-Entwurf**: Root-Metadata setzt `robots: { index: false, follow: false }`,
+  zusätzlich sendet `next.config.ts` für alle Pfade den Header
+  `X-Robots-Tag: noindex, nofollow`. Verhindert, dass dieser Entwurf indexiert
+  wird oder mit landhotel-rebstock.de konkurriert.
+- **Direktbucher-Rabatt zentral und prominent**: neue Konstante
+  `directBookingDiscountPercent` in `content/booking.ts`, aus der
+  `directBookingNote` und die Kurzform `directBookingShort` abgeleitet werden.
+  Der Hinweis erscheint jetzt zusätzlich unter dem „Direkt buchen"-Button im
+  Header (Desktop), unter dem Hero-CTA, in der Preiszeile jeder Zimmerkarte
+  (Startseite und Zimmer-Seite) sowie als eigener, sichtbarer Block über der
+  Preistabelle auf der Preise-Seite.
+- **Zentrale Zimmerzahl**: `roomCount` / `roomCountWord` / `roomCountWordCap`
+  in `content/site.ts`, damit die Zimmerzahl an einer Stelle korrigiert werden
+  kann. Alle Textstellen mit Zimmerzahl (Startseite, Hotel-Übersicht,
+  Zimmer-Seite, Meta-Descriptions) beziehen sich jetzt darauf.
+
+### Changed
+
+- **Überschriften entkitscht**: Hero-H1 „Ankommen, wo Wein und Wald sich
+  begegnen." und Sektions-Titel „Ein kleines Haus mit großem Blick" durch
+  nüchternere, faktenbasierte Formulierungen ersetzt. Laufband-Begriffe auf
+  der Startseite ebenfalls überarbeitet (weg von Stimmungswörtern, hin zu
+  konkreten Fakten wie „Kein Restaurantbetrieb", „Ruhige Lage in Bottenau").
+
 ## [0.5.0] – 2026-07-30
 
 ### Added

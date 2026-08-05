@@ -7,6 +7,7 @@ import { Button } from "@/components/Button/Button";
 import { CheckList } from "@/components/CheckList/CheckList";
 import { hotelNav } from "@/content/nav";
 import { priceRows, priceNotes, includedInPrice } from "@/content/prices";
+import { Icon } from "@/components/Icon/Icon";
 import { bookingUrl, bookingIsExternal, directBookingNote } from "@/content/booking";
 
 export const metadata: Metadata = {
@@ -28,6 +29,11 @@ export default function PreisePage(): React.ReactElement {
 
       <Section>
         <SectionHeader eyebrow="Übernachtung" title="Unsere Zimmerpreise" />
+
+        <div className={styles.directBanner}>
+          <Icon name="gift" className={styles.directBannerIcon} />
+          <p className={styles.directBannerText}>{directBookingNote}</p>
+        </div>
 
         {/* Preistabelle — auf kleinen Screens horizontal scrollbar */}
         <div className={styles.tableWrap}>

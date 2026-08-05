@@ -35,6 +35,12 @@ export const metadata: Metadata = {
     description:
       "Ruhig gelegenes Landhotel zwischen Rheinebene und Rebhängen am Fuß des Schwarzwalds. Familie Noack heißt Sie herzlich willkommen.",
   },
+  // Pre-Sales-Entwurf: darf nicht indexiert werden und nicht mit der
+  // Produktivseite landhotel-rebstock.de konkurrieren.
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
