@@ -55,6 +55,7 @@ export const destinations: readonly Destination[] = [
   {
     name: "Elsass & Straßburg",
     text: "Münster, Gassen und Flair auf der französischen Rheinseite.",
+    image: "/region/straßburg.jpeg",
     distance: "ca. 20 km",
   },
   {
