@@ -15,10 +15,9 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 - **Direktbucher-Rabatt zentral und prominent**: neue Konstante
   `directBookingDiscountPercent` in `content/booking.ts`, aus der
   `directBookingNote` und die Kurzform `directBookingShort` abgeleitet werden.
-  Der Hinweis erscheint jetzt zusätzlich unter dem „Direkt buchen"-Button im
-  Header (Desktop), unter dem Hero-CTA, in der Preiszeile jeder Zimmerkarte
-  (Startseite und Zimmer-Seite) sowie als eigener, sichtbarer Block über der
-  Preistabelle auf der Preise-Seite.
+  Der Hinweis erscheint jetzt zusätzlich unter dem Hero-CTA, in der Preiszeile
+  jeder Zimmerkarte (Startseite und Zimmer-Seite) sowie als eigener,
+  sichtbarer Block über der Preistabelle auf der Preise-Seite.
 - **Zentrale Zimmerzahl**: `roomCount` / `roomCountWord` / `roomCountWordCap`
   in `content/site.ts`, damit die Zimmerzahl an einer Stelle korrigiert werden
   kann. Alle Textstellen mit Zimmerzahl (Startseite, Hotel-Übersicht,
